@@ -1,8 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Providers } from './providers'
+import { Source_Code_Pro } from 'next/font/google'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+const Source = Source_Code_Pro({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +17,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${Source.className} scroll-smooth`}>
+      <body className={`antialiased bg-[#F9F6EE] dark:bg-[#111010]`}>
+        <Providers>
+          <div className="flex h-screen flex-col justify-between">
+            <Header />
+            <div className="mx-auto flex flex-col w-full max-w-md px-4 sm:px-4 sm:py-2 md:max-w-2xl md:px-0 xl:max-w-2xl xl:px-0">
+              <main className="mb-auto mt-24 xl:ml-3 ml-1 md:ml-3">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </div>
+        </Providers>
+      </body>
     </html>
+
   )
 }
