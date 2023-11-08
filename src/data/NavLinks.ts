@@ -9,7 +9,7 @@ export const headerNavLinks = [
 export const OtherLinks = [
     { href: '/tag', title: 'Tags' },
     { href: '/newsletter', title: 'Newsletter' },
-    { href: '/rss.xml', title: 'RSS' },
+    { href: '/rss.xml', title: 'RSS' }
 ]
 
 export const ExternalLinks = [

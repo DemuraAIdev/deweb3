@@ -1,8 +1,8 @@
 import TypedBios from '@/components/typed'
-
+import Skills from '@/components/Skills'
 export default function Home() {
   return (
-
+<>
     <div className="space-y-2 pt-5 pb-8 md:space-y-5 md:h-screen lg:h-sreen md:lg:mt-20 lg:mt-20">
       <div
         className="animate-text bg-gradient-to-r 
@@ -15,12 +15,14 @@ export default function Home() {
           Abdul Vaiz Vahry Iskandar
         </h1>
       </div>
-      <div className="border-dotted rounded-lg border-2 border-gray-500 p-5">
+      <div className="border-dotted rounded-lg border-2 border-gray-500 p-5 ">
         <TypedBios />
-        <p className="text-lg leading-7 text-black dark:text-gray-400">
+        <p className="text-lg leading-7 text-black dark:text-gray-400 hover">
           I am a website developer, bot, graphic designer, and nft artist. I learned to make a website from 2019
         </p>
       </div>
     </div>
+    <Skills text='Coding' img='/images/1.png'/>
+    </>
   )
 }

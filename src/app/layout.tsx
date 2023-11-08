@@ -20,14 +20,15 @@ export default function RootLayout({
     <html lang="en" className={`${Source.className} scroll-smooth `}>
       <body className={`antialiased bg-[#F9F6EE] dark:bg-[#111010]`}>
         <Providers>
-          <div className="flex h-screen flex-col justify-between">
+          <div className="flex h-screen flex-col justify-between ml-3 sm:ml-1">
             <Header />
             <div className="mx-auto flex flex-col w-full max-w-md px-4 sm:px-4 sm:py-2 md:max-w-2xl md:px-0 xl:max-w-2xl xl:px-0">
-              <main className="mb-auto mt-24 xl:ml-3 ml-1 md:ml-3">
+              <main className="mb-auto mt-24 ">
                 {children}
               </main>
               <Footer />
             </div>
+
           </div>
         </Providers>
       </body>

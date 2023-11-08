@@ -9,9 +9,11 @@ export default function TypedBios() {
         typed.current = new Typed(el.current, {
             stringsElement: "#bios",
             typeSpeed: 40,
-            backSpeed: 10,
             loop: true,
             backDelay: 1000,
+            smartBackspace: true,
+            fadeOut: true,
+            cursorChar: "_",
         });
         return () => typed.current.destroy();
     }, []);

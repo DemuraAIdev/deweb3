@@ -9,7 +9,7 @@ export default function Footer() {
             {/* <div className="mb-10">
                 <NowPlaying />
             </div> */}
-            <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
+            <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 md:grid-cols-3">
                 <div className="flex flex-col space-y-4">
                     <p className='font-bold'>Navigation</p>
                     {headerNavLinks.map((link) => (

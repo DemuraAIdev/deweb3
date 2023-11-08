@@ -9,7 +9,10 @@ module.exports = () => {
         reactStrictMode: true,
         pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
         images: {
-            domains: ['picsum.photos'],
+            remotePatterns: [{
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            }]
         },
         webpack: (config, options) => {
             config.module.rules.push({
