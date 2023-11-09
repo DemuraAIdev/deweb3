@@ -26,7 +26,6 @@ export async function createTagCount() {
   writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
 }
 
-
 async function postContentlayer() {
   await createTagCount()
 }

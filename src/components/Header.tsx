@@ -1,8 +1,8 @@
-import ThemeSwitch from "./ThemeSwitch";
-import { headerNavLinks } from "@/data/NavLinks";
-import NavLink from "./NavLink";
-import MobileNav from "./MoNav";
-import { Suspense } from "react";
+import ThemeSwitch from './ThemeSwitch'
+import { headerNavLinks } from '@/data/NavLinks'
+import NavLink from './NavLink'
+import MobileNav from './MoNav'
+import { Suspense } from 'react'
 
 const Header = () => {
   return (
@@ -22,7 +22,7 @@ const Header = () => {
         <MobileNav />
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

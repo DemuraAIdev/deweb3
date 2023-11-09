@@ -1,8 +1,4 @@
-
-
 const isProduction = process.env.NODE_ENV === 'production'
-
-
 
 export function dateSortDesc(a, b) {
   if (a > b) return -1
@@ -40,10 +36,7 @@ export function sortedBlogPost(allBlogs) {
  * @param {Keys[]} keys
  * @return {*}  {ConvertPick<{ [K in Keys]: Obj[K] }>}
  */
-export const pick = (
-  obj,
-  keys
-) => {
+export const pick = (obj, keys) => {
   return keys.reduce((acc, key) => {
     acc[key] = obj[key] ?? null
     return acc
@@ -58,14 +51,13 @@ export const pick = (
  * @param {Keys[]} keys
  * @return {*}  {Omit<Obj, Keys>}
  */
-export const omit =(obj, keys)=> {
+export const omit = (obj, keys) => {
   const result = Object.assign({}, obj)
   keys.forEach((key) => {
     delete result[key]
   })
   return result
 }
-
 
 /**
  * Omit body, _raw, _id from MDX document and return only the core content
@@ -84,7 +76,7 @@ export function coreContent(content) {
  * @param {T[]} contents
  * @return {*}  {CoreContent<T>[]}
  */
-export function allCoreContent(contents)[] {
+export function allCoreContent(contents) {
   if (isProduction)
     return contents.map((c) => coreContent(c)).filter((c) => !('draft' in c && c.draft === true))
   return contents.map((c) => coreContent(c))
