@@ -7,6 +7,7 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -76,11 +77,8 @@ const config: Config = {
         13: '3.25rem',
         14: '3.5rem',
       },
-      fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
 
+      colors: {
         'spotify-green': '#1DB954',
         primary: colors.teal,
         gray: colors.neutral,

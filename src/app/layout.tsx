@@ -4,6 +4,8 @@ import { Providers } from './providers'
 import { Source_Code_Pro } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import SectionContainer from '@/components/Container'
+
 const Source = Source_Code_Pro({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,13 +18,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${Source.className} scroll-smooth `}>
       <body className={`bg-[#F9F6EE] antialiased dark:bg-[#111010]`}>
         <Providers>
-          <div className="ml-3 flex h-screen flex-col justify-between sm:ml-1">
-            <Header />
-            <div className="mx-auto flex w-full max-w-md flex-col px-4 sm:px-4 sm:py-2 md:max-w-2xl md:px-0 xl:max-w-2xl xl:px-0">
-              <main className="mb-auto mt-24 ">{children}</main>
+          <SectionContainer>
+            <div className="flex h-screen flex-col justify-between sm:ml-1">
+              <Header />
+              <div className=" flex  flex-col">
+                <main className="mb-auto ">{children}</main>
+              </div>
               <Footer />
             </div>
-          </div>
+          </SectionContainer>
         </Providers>
       </body>
     </html>

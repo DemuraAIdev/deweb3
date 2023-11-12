@@ -19,6 +19,10 @@ module.exports = () => {
         },
       ],
     },
+    experimental: {
+      webpackBuildWorker: true,
+      mdxRs: true,
+    },
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
