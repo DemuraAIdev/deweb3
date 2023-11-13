@@ -27,6 +27,7 @@ function formatTime(milliseconds) {
   return `${formattedMinutes}:${formattedSeconds}`
 }
 
+export const revalidate = 0
 export async function GET() {
   const response = await getNowPlaying()
   if (response.status === 401) {
