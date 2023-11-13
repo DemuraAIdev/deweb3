@@ -5,7 +5,7 @@ import fetcher from '@/lib/fetcher'
 import MusicEqualizer from './MusicEq'
 
 export default function NowPlaying() {
-  const { data } = useSWR('/api/spotify/now-playing', fetcher)
+  const { data } = useSWR('/api/spotify/np', fetcher)
   return (
     <div className=" flex items-center gap-1 sm:gap-2">
       <svg className="h-5 w-5 flex-none" viewBox="0 0 168 168">
