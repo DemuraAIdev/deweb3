@@ -11,6 +11,22 @@ export interface NowPlayingSong {
   album?: string
 }
 
+function formatTime(milliseconds) {
+  // Convert milliseconds to seconds
+  const totalSeconds = Math.floor(milliseconds / 1000)
+
+  // Calculate minutes and seconds
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = totalSeconds % 60
+
+  // Add leading zeros if needed
+  const formattedMinutes = String(minutes).padStart(2, '0')
+  const formattedSeconds = String(seconds).padStart(2, '0')
+
+  // Return formatted time
+  return `${formattedMinutes}:${formattedSeconds}`
+}
+
 export async function GET() {
   const response = await getNowPlaying()
   if (response.status === 401) {
@@ -34,6 +50,8 @@ export async function GET() {
     const album = song.item?.album.name
     const albumImageUrl = song.item?.album.images[0].url
     const songUrl = song.item?.external_urls.spotify
+    const timestamp = formatTime(song.progress_ms)
+    const duration = formatTime(song.item?.duration_ms)
 
     return NextResponse.json({
       album,
@@ -42,6 +60,8 @@ export async function GET() {
       isPlaying,
       songUrl,
       title,
+      timestamp,
+      duration,
     })
   }
 }
