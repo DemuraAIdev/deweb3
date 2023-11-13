@@ -1,5 +1,6 @@
 import TypedBios from '@/components/typed'
 import Skills from '@/components/Skills'
+import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 export default function Home() {
   return (
     <>
@@ -23,7 +24,16 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Skills text="Coding" img="/images/1.png" />
+      <Skills />
+      <div className="pt-20">
+        <h1 className="text-center text-2xl font-bold">This Website Powered By</h1>
+        <div className="flex items-center justify-center text-5xl gap-5 p-5">
+            <SiNextdotjs />
+            <SiTailwindcss />
+            <SiVercel />
+            <SiGithub />
+        </div>
+      </div>
     </>
   )
 }

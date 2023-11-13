@@ -1,0 +1,7 @@
+export type Fetcher = typeof fetcher
+
+export default async function fetcher(input: RequestInfo, init?: RequestInit) {
+  const res = await fetch(input, init)
+
+  return res.json()
+}

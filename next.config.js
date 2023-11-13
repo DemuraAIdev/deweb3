@@ -20,7 +20,7 @@ module.exports = () => {
       ],
     },
     experimental: {
-      webpackBuildWorker: true,
+      webpackBuildWorker: false,
       mdxRs: true,
     },
     webpack: (config, options) => {

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import SocialIcon from '@/components/Icons'
 import Image from '@/components/Image'
 import { coreContent } from '@/lib/utils'
 import { Authors, allAuthors } from 'contentlayer/generated'

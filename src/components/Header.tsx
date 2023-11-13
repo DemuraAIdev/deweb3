@@ -6,7 +6,7 @@ import { Suspense } from 'react'
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-20 flex w-full items-center justify-between bg-[#F9F6EE] py-4 dark:bg-[#111010]">
+    <header className="sticky top-0 z-20 flex w-full items-center justify-between bg-light py-4 dark:bg-dark">
       <nav className="flex w-full items-center justify-between">
         <Suspense fallback={null}>
           {headerNavLinks.map((link) => (

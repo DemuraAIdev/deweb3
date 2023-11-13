@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${Source.className} scroll-smooth `}>
-      <body className={`bg-[#F9F6EE] antialiased dark:bg-[#111010]`}>
+      <body className={`bg-light antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between sm:ml-1">

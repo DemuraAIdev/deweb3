@@ -82,6 +82,8 @@ const config: Config = {
         'spotify-green': '#1DB954',
         primary: colors.teal,
         gray: colors.neutral,
+        light: '#F9F6EE',
+        dark: '#111010',
       },
       typography: (theme: (arg0: string) => any) => ({
         DEFAULT: {
