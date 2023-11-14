@@ -3,6 +3,7 @@ import Link from './Link'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import MusicEqualizer from './MusicEq'
+import Image from 'next/image'
 
 export default function NowPlaying() {
   const { data } = useSWR('/api/spotify/np', fetcher)
@@ -17,14 +18,16 @@ export default function NowPlaying() {
       {data?.isPlaying && data?.songUrl && <MusicEqualizer />}
       <div className="flex max-w-full truncate">
         {data?.songUrl ? (
-          <Link
-            className="umami--click--spotify-nowplaying max-w-max truncate text-sm hover:text-spotify-green"
-            href={data.songUrl}
-            title={data.title}
-            showIcon={false}
-          >
-            {data.title}
-          </Link>
+          <>
+            <Link
+              className="umami--click--spotify-nowplaying max-w-max truncate text-sm hover:text-spotify-green"
+              href={data.songUrl}
+              title={data.title}
+              showIcon={false}
+            >
+              {data.title}
+            </Link>
+          </>
         ) : (
           <p className="text-sm text-gray-500 dark:text-gray-400">Not Playing</p>
         )}
@@ -32,6 +35,7 @@ export default function NowPlaying() {
         <p className="max-w-max truncate text-sm text-gray-500 dark:text-gray-400">
           {data?.artist ?? 'Spotify'}
         </p>
+        <p className="px-2 text-sm">{data?.timestamp ?? ''}</p>
       </div>
     </div>
   )

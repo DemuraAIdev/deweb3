@@ -27,11 +27,11 @@ export default function Home() {
       <Skills />
       <div className="pt-20">
         <h1 className="text-center text-2xl font-bold">This Website Powered By</h1>
-        <div className="flex items-center justify-center text-5xl gap-5 p-5">
-            <SiNextdotjs />
-            <SiTailwindcss />
-            <SiVercel />
-            <SiGithub />
+        <div className="flex items-center justify-center gap-5 p-5 text-5xl">
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiVercel />
+          <SiGithub />
         </div>
       </div>
     </>
