@@ -1,5 +1,4 @@
 import { getNowPlaying } from '@/lib/apotify'
-import { NextApiRequest, NextApiResponse } from 'next'
 import { NextResponse } from 'next/server'
 
 export interface NowPlayingSong {

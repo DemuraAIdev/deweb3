@@ -21,6 +21,10 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'i.scdn.co',
         },
+        {
+          protocol: 'https',
+          hostname: 'avatars.githubusercontent.com',
+        },
       ],
     },
     experimental: {
