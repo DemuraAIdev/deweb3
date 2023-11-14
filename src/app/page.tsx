@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <Skills />
       <div className="pt-20">
-        <h1 className="text-center text-2xl font-bold">This Website Powered By</h1>
+        <h1 className=" text-center text-sm font-bold">This Website Powered By</h1>
         <div className="flex items-center justify-center gap-5 p-5 text-5xl">
           <SiNextdotjs />
           <SiTailwindcss />
