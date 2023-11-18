@@ -1,7 +1,4 @@
 {
-    "home": {
-        "powered": "This Website Powered By"
-    },
     "project": {
         "title": "Project",
         "description": "Here some of my projects"
@@ -15,6 +12,7 @@
     "footer": {
         "navigation": "Navigation",
         "other": "Other",
-        "external": "External"
+        "external": "External",
+        "powered": "This Website Powered By"
     }
 }
