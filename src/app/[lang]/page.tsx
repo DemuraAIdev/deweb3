@@ -2,10 +2,11 @@ import TypedBios from '@/components/typed'
 import Skills from '@/components/Skills'
 import Commits from '@/components/Commits'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
-import { getDictionary } from './dictionaries'
+import { getDictionary } from '../../dictionaries'
+import { Locale } from 'i18n-config'
 
-export default async function Home({ params: { lang } }) {
-  const dict = await getDictionary(lang)
+export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(lang)
   return (
     <>
       <div className="lg:h-sreen space-y-2 pb-8 pt-5 md:h-screen md:space-y-5 md:lg:mt-20 lg:mt-20">
@@ -31,7 +32,7 @@ export default async function Home({ params: { lang } }) {
       <Skills />
       <Commits />
       <section className="pt-20">
-        <h1 className=" text-center text-sm font-bold">{dict.home.powered}</h1>
+        <h1 className=" text-center text-sm font-bold">{dictionary.home.powered}</h1>
         <div className="flex items-center justify-center gap-5 p-5 text-5xl">
           <SiNextdotjs />
           <SiTailwindcss />
