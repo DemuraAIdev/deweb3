@@ -1,6 +1,6 @@
 import { getNowPlaying } from '@/lib/apotify'
 import { NextResponse } from 'next/server'
-
+export const dynamic = 'force-dynamic'
 export interface NowPlayingSong {
   isPlaying: boolean
   artist?: string
@@ -26,7 +26,6 @@ function formatTime(milliseconds) {
   return `${formattedMinutes}:${formattedSeconds}`
 }
 
-export const revalidate = 0
 export async function GET() {
   const response = await getNowPlaying()
   if (response.status === 401) {

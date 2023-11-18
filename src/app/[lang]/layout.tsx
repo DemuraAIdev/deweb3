@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
 import config from '@/data/config'
+import { getDictionary } from '@/dictionaries'
 
 const Source = Source_Code_Pro({ subsets: ['latin'] })
 
@@ -39,19 +40,20 @@ export const metadata: Metadata = {
   },
 }
 
-import { i18n } from 'i18n-config'
+import { Locale, i18n } from 'i18n-config'
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { lang: string }
+  params: { lang: Locale }
 }) {
+  const dictionary = await getDictionary(params.lang)
   return (
     <html lang={params.lang} className={`${Source.className} scroll-smooth `}>
       <body className={`bg-light antialiased dark:bg-dark`}>
@@ -62,7 +64,7 @@ export default function RootLayout({
               <div className=" flex  flex-col">
                 <main className="mb-auto ">{children}</main>
               </div>
-              <Footer />
+              <Footer dictionary={dictionary.footer} />
             </div>
           </SectionContainer>
         </Providers>
