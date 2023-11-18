@@ -10,12 +10,7 @@ const Header = () => {
       <nav className="flex w-full items-center justify-between">
         <Suspense fallback={null}>
           {headerNavLinks.map((link) => (
-            <NavLink
-              key={link.title}
-              href={link.href}
-              text={link.title}
-              className="text-lg sm:space-x-8"
-            />
+            <NavLink key={link.title} href={link.href} text={link.title} className="sm:space-x-8" />
           ))}
         </Suspense>
         <ThemeSwitch />

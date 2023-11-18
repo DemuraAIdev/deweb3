@@ -3,11 +3,12 @@
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import CustomLink from './Link'
+import { SiGithub } from 'react-icons/si'
 
 export default function Commits() {
   const { data } = useSWR('/api/github/commit', fetcher)
   return (
-    <section className="mt-10 flex snap-center flex-col justify-center lg:md:h-1/4">
+    <section className="mt-20 mb-5 flex snap-center flex-col justify-center">
       <h2 className=" py-5 text-xl font-bold">Latest Update</h2>
       <ul className="relative border-s border-gray-200 dark:border-gray-700">
         {data?.map((commit) => (
@@ -23,6 +24,11 @@ export default function Commits() {
             </CustomLink>
           </li>
         ))}
+        <li className="ms-4 max-w-sm rounded bg-white p-2">
+          <CustomLink href={'https://github.com/DemuraAIdev'} showIcon={false}>
+            <h3 className="text-center text-lg font-semibold text-black">Github</h3>
+          </CustomLink>
+        </li>
       </ul>
     </section>
   )
