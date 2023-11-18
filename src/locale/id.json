@@ -1,7 +1,4 @@
 {
-    "home": {
-        "powered": "Website Ini Didukung Oleh"
-    },
     "project": {
         "title": "Proyek",
         "description": "Ini adalah proyek saya"
@@ -15,6 +12,7 @@
     "footer": {
         "navigation": "Navigasi",
         "other": "Lainnya",
-        "external": "Eksternal"
+        "external": "Eksternal",
+        "powered": "This Website Powered By"
     }
 }

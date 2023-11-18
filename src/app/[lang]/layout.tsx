@@ -59,7 +59,7 @@ export default async function RootLayout({
       <body className={`bg-light antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
-            <div className="flex h-screen flex-col justify-between sm:ml-1">
+            <div className="flex h-screen  flex-col justify-between sm:ml-1">
               <Header />
               <div className=" flex  flex-col">
                 <main className="mb-auto ">{children}</main>

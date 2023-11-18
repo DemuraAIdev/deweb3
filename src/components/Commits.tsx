@@ -7,7 +7,7 @@ import CustomLink from './Link'
 export default function Commits() {
   const { data } = useSWR('/api/github/commit', fetcher)
   return (
-    <section className="mt-10">
+    <section className="mt-10 flex snap-center flex-col justify-center lg:md:h-1/4">
       <h2 className=" py-5 text-xl font-bold">Latest Update</h2>
       <ul className="relative border-s border-gray-200 dark:border-gray-700">
         {data?.map((commit) => (

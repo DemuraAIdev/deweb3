@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import { headerNavLinks, ExternalLinks, OtherLinks } from '@/data/NavLinks'
 import NowPlaying from '@/components/NowPlaying'
 import LocaleSwitcher from './LangSwitch'
+import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 export default function Footer({
   dictionary,
 }: {
@@ -9,6 +10,7 @@ export default function Footer({
     navigation: string
     other: string
     external: string
+    powered: string
   }
 }) {
   return (
@@ -55,6 +57,15 @@ export default function Footer({
           ))}
         </div>
       </div>
+      <section className="">
+        <h1 className=" text-center text-sm font-bold">{dictionary.powered}</h1>
+        <div className="flex items-center justify-center gap-2 p-2 text-2xl">
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiVercel />
+          <SiGithub />
+        </div>
+      </section>
       <div className=" flex items-center justify-center space-x-2 text-sm text-black dark:text-gray-400">
         <div>Abdul Vaiz</div>
         <div>{` • `}</div>

@@ -14,7 +14,7 @@ export default function Parralax({
     <>
       <ul className="grid list-none grid-cols-1 gap-7 divide-y">
         <li
-          className="transform animate-text rounded-xl bg-gradient-to-r 
+          className="transform rounded-xl bg-gradient-to-r 
             from-[#6EE7B7] via-[#3B82F6]  to-[#9333EA] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
         >
           <CustomLink href="/projects" className="">
@@ -26,8 +26,8 @@ export default function Parralax({
         </li>
 
         <li
-          className="transform animate-text rounded-xl bg-gradient-to-r 
-            from-[#6EE7B7] via-[#3B82F6]  to-[#9333EA] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
+          className="transform rounded-xl bg-gradient-to-r 
+            from-[#3B82F6] via-[#FF9685]  to-[#F9F871] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
         >
           <CustomLink href="/blog" className="">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-light p-8 transition hover:bg-transparent dark:bg-dark">
