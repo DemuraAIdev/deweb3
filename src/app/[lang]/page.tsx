@@ -4,10 +4,6 @@ import Commits from '@/components/Commits'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 import { getDictionary } from './dictionaries'
 
-export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'id' }]
-}
-
 export default async function Home({ params: { lang } }) {
   const dict = await getDictionary(lang)
   return (
