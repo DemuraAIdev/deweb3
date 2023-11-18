@@ -1,6 +1,6 @@
 const config = {
   title: 'VahryIskandar',
-  description: '',
+  description: 'This is Vahry Iskandar personal website',
   siteURL: 'http://localhost:3000/',
   language: 'en-us',
   locale: 'en-US',
