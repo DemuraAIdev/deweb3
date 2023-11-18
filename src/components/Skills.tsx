@@ -1,6 +1,15 @@
 import CustomLink from './Link'
 
-export default function Parralax() {
+export default function Parralax({
+  dictionary,
+}: {
+  dictionary: {
+    project: string
+    blog: string
+    projectdesc: string
+    blogdesc: string
+  }
+}) {
   return (
     <>
       <ul className="grid list-none grid-cols-1 gap-7 divide-y">
@@ -10,8 +19,8 @@ export default function Parralax() {
         >
           <CustomLink href="/projects" className="">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-light p-8 transition hover:bg-transparent dark:bg-dark">
-              <span className=" text-4xl font-bold">Project</span>
-              <p>Proyek yang saya kerjakan</p>
+              <span className=" text-4xl font-bold">{dictionary.project}</span>
+              <p>{dictionary.projectdesc}</p>
             </div>
           </CustomLink>
         </li>
@@ -22,8 +31,8 @@ export default function Parralax() {
         >
           <CustomLink href="/blog" className="">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-light p-8 transition hover:bg-transparent dark:bg-dark">
-              <span className=" text-4xl font-bold">Blog</span>
-              <p>Tulisan yang saya tulis</p>
+              <span className=" text-4xl font-bold">{dictionary.blog}</span>
+              <p>{dictionary.blogdesc}</p>
             </div>
           </CustomLink>
         </li>

@@ -1,5 +1,5 @@
 import TypedBios from '@/components/typed'
-import Skills from '@/components/Skills'
+import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 import { getDictionary } from '@/dictionaries'
@@ -29,7 +29,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           </p>
         </div>
       </div>
-      <Skills />
+      <SectionMini dictionary={dictionary.SectionMini} />
       <Commits />
       <section className="pt-20">
         <h1 className=" text-center text-base font-bold">{dictionary.home.powered}</h1>

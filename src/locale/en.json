@@ -6,6 +6,12 @@
         "title": "Project",
         "description": "Here some of my projects"
     },
+    "SectionMini": {
+        "project": "Project",
+        "projectdesc": "The project I am working on",
+        "blog": "Blog",
+        "blogdesc": "The writing I wrote"
+    },
     "footer": {
         "navigation": "Navigation",
         "other": "Other",

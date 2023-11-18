@@ -1,9 +1,7 @@
 import Link from '@/components/Link'
 import { headerNavLinks, ExternalLinks, OtherLinks } from '@/data/NavLinks'
 import NowPlaying from '@/components/NowPlaying'
-import { getDictionary } from '@/dictionaries'
-import { Locale } from 'i18n-config'
-
+import LocaleSwitcher from './LangSwitch'
 export default function Footer({
   dictionary,
 }: {
@@ -57,13 +55,14 @@ export default function Footer({
           ))}
         </div>
       </div>
-      <div className="mb-9 flex items-center justify-center space-x-2 text-sm text-black dark:text-gray-400">
+      <div className=" flex items-center justify-center space-x-2 text-sm text-black dark:text-gray-400">
         <div>Abdul Vaiz</div>
         <div>{` • `}</div>
         <div>{`© ${new Date().getFullYear()}`}</div>
         <div>{` • `}</div>
         <Link href="/">Vahry Iskandar</Link>
       </div>
+      <LocaleSwitcher />
     </footer>
   )
 }

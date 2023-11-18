@@ -21,9 +21,6 @@ export default function Commits() {
                 {commit.message}
               </h3>
             </CustomLink>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              {commit.sha}
-            </p>
           </li>
         ))}
       </ul>

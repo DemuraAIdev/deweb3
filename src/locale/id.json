@@ -6,6 +6,12 @@
         "title": "Proyek",
         "description": "Ini adalah proyek saya"
     },
+    "SectionMini": {
+        "project": "Proyek",
+        "projectdesc": "Proyek yang saya kerjakan",
+        "blog": "Blog",
+        "blogdesc": "Tulisan yang saya tulis"
+    },
     "footer": {
         "navigation": "Navigasi",
         "other": "Lainnya",
