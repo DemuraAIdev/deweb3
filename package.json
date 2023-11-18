@@ -9,6 +9,7 @@
     "lint": "next lint --fix --dir src/pages --dir src/app --dir src/components --dir src/lib --dir src/layouts --dir scripts"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/unist": "^3.0.2",
@@ -19,6 +20,7 @@
     "image-size": "^1.0.2",
     "js-yaml": "^4.1.0",
     "mdast-util-to-string": "^4.0.0",
+    "negotiator": "^0.6.3",
     "next": "14.0.1",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",

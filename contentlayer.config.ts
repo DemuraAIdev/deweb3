@@ -62,7 +62,7 @@ function createTagCount(allBlogs: MDXBlog[]) {
       })
     }
   })
-  writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync('./src/app/[lang]/tag-data.json', JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs: MDXBlog[]) {

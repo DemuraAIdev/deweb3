@@ -1,18 +1,41 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+// import { NextResponse } from 'next/server'
+// import type { NextRequest } from 'next/server'
+import { match } from '@formatjs/intl-localematcher'
+import Negotiator from 'negotiator'
 
-export function middleware(request: NextRequest) {
-  // Clone the request headers and set a new header `x-hello-from-middleware1`
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set('X-ralas-version', '1.0.0')
-  requestHeaders.set('X-Next-Server', 'Next.js')
+const headers = { 'accept-language': 'en-US,en,id;q=0.5' }
+const languages = new Negotiator({ headers }).languages()
+const locales = ['en', 'id']
+const defaultLocale = 'en'
 
-  // You can also set request headers in NextResponse.rewrite
-  const response = NextResponse.next({
-    request: {
-      // New request headers
-      headers: requestHeaders,
-    },
-  })
-  return response
+// Get the preferred locale, similar to the above or using a library
+function getLocale(request) {
+  const locale = match(languages, locales, defaultLocale)
+  return locale
+}
+
+export function middleware(request) {
+  // Check if there is any supported locale in the pathname
+  const { pathname } = request.nextUrl
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+
+  if (pathnameHasLocale) return
+
+  // Redirect if there is no locale
+  const locale = getLocale(request)
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  // e.g. incoming request is /products
+  // The new URL is now /en-US/products
+  return Response.redirect(request.nextUrl)
+}
+
+export const config = {
+  matcher: [
+    // Skip all internal paths (_next)
+    '/((?!_next).*)',
+    // Optional: only run on root (/) URL
+    // '/'
+  ],
 }

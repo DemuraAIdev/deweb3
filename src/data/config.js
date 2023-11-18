@@ -1,5 +1,6 @@
 const config = {
   title: 'VahryIskandar',
+  description: '',
   siteURL: 'http://localhost:3000/',
   language: 'en-us',
   locale: 'en-US',
