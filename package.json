@@ -15,7 +15,6 @@
     "@types/unist": "^3.0.2",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
-    "esbuild": "^0.19.5",
     "github-slugger": "^2.0.0",
     "image-size": "^1.0.2",
     "js-yaml": "^4.1.0",
@@ -71,14 +70,5 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  },
-  "resolutions": {
-    "@opentelemetry/api": "1.4.1",
-    "@opentelemetry/core": "1.13.0",
-    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-    "@opentelemetry/resources": "1.13.0",
-    "@opentelemetry/sdk-trace-base": "1.13.0",
-    "@opentelemetry/sdk-trace-node": "1.13.0",
-    "@opentelemetry/semantic-conventions": "1.13.0"
   }
 }

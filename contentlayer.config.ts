@@ -4,7 +4,6 @@ import readingTime from 'reading-time'
 import GithubSlugger from 'github-slugger'
 import path from 'path'
 import { allCoreContent, sortPosts } from './src/lib/utils'
-import type { MDXBlog } from './src/lib/utils'
 
 const slugger = new GithubSlugger()
 
@@ -48,7 +47,7 @@ const computedFields: ComputedFields = {
 /**
  * Count the occurrences of all tags across blog posts and write to json file
  */
-function createTagCount(allBlogs: MDXBlog[]) {
+function createTagCount(allBlogs) {
   const tagCount: Record<string, number> = {}
   allBlogs.forEach((file) => {
     if (file.tags && (!isProduction || file.draft !== true)) {
@@ -65,8 +64,8 @@ function createTagCount(allBlogs: MDXBlog[]) {
   writeFileSync('./src/app/[lang]/tag-data.json', JSON.stringify(tagCount))
 }
 
-function createSearchIndex(allBlogs: MDXBlog[]) {
-  writeFileSync(`src/public/search.json`, JSON.stringify(allCoreContent(sortPosts(allBlogs))))
+function createSearchIndex(allBlogs) {
+  writeFileSync(`public/search.json`, JSON.stringify(allCoreContent(sortPosts(allBlogs))))
   console.log('Local search index generated...')
 }
 
@@ -147,9 +146,9 @@ export default makeSource({
       rehypePresetMinify,
     ],
   },
-  // onSuccess: async (importData) => {
-  //     const { allBlogs } = await importData()
-  //     createTagCount(allBlogs)
-  //     createSearchIndex(allBlogs)
-  // },
+  onSuccess: async (importData) => {
+    const { allBlogs } = await importData()
+    createTagCount(allBlogs)
+    createSearchIndex(allBlogs)
+  },
 })
