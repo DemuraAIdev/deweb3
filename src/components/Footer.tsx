@@ -13,7 +13,7 @@ export default function Footer({
 }) {
   return (
     <footer className="mt-10 ">
-      <hr className="border-1 mb-8 w-full border-gray-200 dark:border-gray-800" />
+      <hr className=" mb-8 w-full border-gray-200 dark:border-gray-800" />
       <div className="mb-10">
         <NowPlaying />
       </div>
