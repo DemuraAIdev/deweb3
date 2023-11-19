@@ -5,7 +5,6 @@ import { Authors, allAuthors } from 'contentlayer/generated'
 const author = allAuthors.find((p) => p.slug === 'default') as Authors
 const mainContent = coreContent(author)
 
-
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = mainContent
 
