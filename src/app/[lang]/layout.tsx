@@ -61,9 +61,7 @@ export default async function RootLayout({
           <SectionContainer>
             <div className="flex h-screen  flex-col justify-between sm:ml-1">
               <Header />
-              <div className=" flex  flex-col">
-                <main className="mb-auto ">{children}</main>
-              </div>
+              <main className="mb-auto ">{children}</main>
               <Footer dictionary={dictionary.footer} />
             </div>
           </SectionContainer>

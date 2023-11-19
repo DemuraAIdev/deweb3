@@ -9,7 +9,7 @@ export default function Commits() {
   const { data } = useSWR('/api/github/commit', fetcher)
   return (
     <section className="mb-5 mt-20 flex snap-center flex-col justify-center">
-      <h1 className="mb-8 text-2xl font-medium">Update</h1>
+      <h1 className="mb-8 text-2xl font-medium">Update Log</h1>
       <ul className="relative">
         {data?.map((commit) => (
           <li key={commit.sha} className="mb-5">

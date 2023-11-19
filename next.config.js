@@ -12,6 +12,7 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     images: {
+      dangerouslyAllowSVG: true,
       remotePatterns: [
         {
           protocol: 'https',
@@ -24,6 +25,10 @@ module.exports = () => {
         {
           protocol: 'https',
           hostname: 'avatars.githubusercontent.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'count.vahryiskandar.my.id',
         },
       ],
     },
