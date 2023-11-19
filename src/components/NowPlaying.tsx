@@ -4,7 +4,6 @@ import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import MusicEqualizer from './MusicEq'
 import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
 
 export default function NowPlaying() {
   const { data } = useSWR('/api/spotify/np', fetcher)
