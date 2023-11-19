@@ -56,7 +56,7 @@ export default async function RootLayout({
   const dictionary = await getDictionary(params.lang)
   return (
     <html lang={params.lang} className={`${Source.className} scroll-smooth `}>
-      <body className={`bg-light antialiased dark:bg-dark`}>
+      <body className={`bg-white antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
             <div className="flex h-screen  flex-col justify-between sm:ml-1">
