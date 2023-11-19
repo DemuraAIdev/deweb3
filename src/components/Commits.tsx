@@ -13,14 +13,14 @@ export default function Commits() {
       <ul className="relative">
         {data?.map((commit) => (
           <li key={commit.sha} className="mb-5">
+            <CustomLink href={commit.url} showIcon={false}>
+              <h2 className="text-md font-medium text-gray-900 dark:text-white">
+                {commit.message}
+              </h2>
+            </CustomLink>
             <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
               {commit.time}
             </time>
-            <CustomLink href={commit.url} showIcon={false}>
-              <h3 className="text-md font-medium text-gray-900 dark:text-white">
-                {commit.message}
-              </h3>
-            </CustomLink>
           </li>
         ))}
       </ul>
