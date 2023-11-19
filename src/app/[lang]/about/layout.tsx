@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
 import Image from '@/components/Image'
 import { coreContent } from '@/lib/utils'
 import { Authors, allAuthors } from 'contentlayer/generated'
 
 const author = allAuthors.find((p) => p.slug === 'default') as Authors
 const mainContent = coreContent(author)
+
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = mainContent
@@ -23,6 +23,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
             alt={'count'}
             width={310}
             height={100}
+            unoptimized
           />
         </div>
         <div className="prose dark:prose-dark xl:col-span-2">{children}</div>
