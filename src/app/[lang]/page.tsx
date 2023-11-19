@@ -17,7 +17,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
             text-transparent
             "
         >
-          <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-7xl font-extrabold leading-none sm:my-10 ">
+          <h1 className="tracking-tightest my-28 select-none text-7xl font-bold leading-none sm:my-10 ">
             Abdul Vaiz Vahry Iskandar
           </h1>
         </div>

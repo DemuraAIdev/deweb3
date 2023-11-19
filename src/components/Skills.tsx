@@ -17,9 +17,9 @@ export default function Parralax({
           className="transform rounded-xl bg-gradient-to-r 
             from-[#6EE7B7] via-[#3B82F6]  to-[#9333EA] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
         >
-          <CustomLink href="/projects" className="">
+          <CustomLink href="/projects">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-white p-8 transition hover:bg-transparent dark:bg-dark">
-              <span className=" text-4xl font-bold">{dictionary.project}</span>
+              <span className=" text-3xl font-medium">{dictionary.project}</span>
               <p>{dictionary.projectdesc}</p>
             </div>
           </CustomLink>
@@ -29,9 +29,9 @@ export default function Parralax({
           className="transform rounded-xl bg-gradient-to-r 
             from-[#3B82F6] via-[#FF9685]  to-[#F9F871] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
         >
-          <CustomLink href="/blog" className="">
+          <CustomLink href="/blog">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-white p-8 transition hover:bg-transparent dark:bg-dark">
-              <span className=" text-4xl font-bold">{dictionary.blog}</span>
+              <span className=" text-3xl font-medium">{dictionary.blog}</span>
               <p>{dictionary.blogdesc}</p>
             </div>
           </CustomLink>
