@@ -1,7 +1,7 @@
 const config = {
   title: 'Vahry Iskandar',
   description: 'This is Vahry Iskandar personal website',
-  siteURL: 'https://beta.vahryiskandar.my.id/',
+  siteURL: 'https://vahryiskandar.my.id/',
   language: 'en-us',
   locale: 'en-US',
   socialBanner: '/images/twitter-card.png',
