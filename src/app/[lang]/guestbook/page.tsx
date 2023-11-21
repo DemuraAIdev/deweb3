@@ -2,7 +2,7 @@ import { auth } from '@/auth'
 import { SignIn, SignOut } from './button'
 import { Suspense } from 'react'
 
-export default function GuestBook({ children }: { children: React.ReactNode }) {
+export default function GuestBook() {
   return (
     <>
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
