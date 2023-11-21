@@ -67,11 +67,10 @@ export default function Footer({
         </div>
       </section>
       <div className=" flex items-center justify-center space-x-2 text-sm text-black dark:text-gray-400">
-        <div>Abdul Vaiz</div>
-        <div>{` • `}</div>
         <div>{`© ${new Date().getFullYear()}`}</div>
-        <div>{` • `}</div>
-        <Link href="/">Vahry Iskandar</Link>
+        <Link href="/">
+          <span className="text-black dark:text-white">Vahry Iskandar</span>. All rights reserved.
+        </Link>
       </div>
       <LocaleSwitcher />
     </footer>
