@@ -90,9 +90,6 @@ export async function getGuestbookEntries() {
       updatedAt: true,
       user: true,
     },
-    cacheStrategy: {
-      swr: 60,
-    },
   })
 
   return entries.map<GuestBookEntry>((entry) => ({
