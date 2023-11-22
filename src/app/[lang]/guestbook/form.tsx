@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useFormStatus } from 'react-dom'
 import { saveGuestMessage } from '@/lib/db/action'
+import { BiSolidPaperPlane } from 'react-icons/bi'
 
 export default function Form() {
   const formRef = useRef<HTMLFormElement>(null)
@@ -38,7 +39,7 @@ function SubmitButton() {
       disabled={pending}
       type="submit"
     >
-      Sign
+      {pending ? 'Sending...' : <BiSolidPaperPlane />}
     </button>
   )
 }

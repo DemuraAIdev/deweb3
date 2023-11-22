@@ -2,8 +2,7 @@ import { auth } from '@/auth'
 import { SignIn, SignOut, DeleteEnt } from './button'
 import { Suspense } from 'react'
 import Form from './form'
-import { deleteGuestbookEntries, getGuestbookEntries } from '@/lib/db/action'
-import { useFormStatus } from 'react-dom'
+import { getGuestbookEntries } from '@/lib/db/action'
 
 export default function GuestBook() {
   return (
@@ -13,10 +12,8 @@ export default function GuestBook() {
           Guestbook
         </h1>
       </div>
-      <Suspense>
-        <GuestbookForm />
-        <GuestbookEntries />
-      </Suspense>
+      <GuestbookForm />
+      <GuestbookEntries />
     </>
   )
 }
