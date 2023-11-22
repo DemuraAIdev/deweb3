@@ -1,6 +1,9 @@
 import { auth } from '@/auth'
-import { SignIn, SignOut } from './button'
+import { SignIn, SignOut, DeleteEnt } from './button'
 import { Suspense } from 'react'
+import Form from './form'
+import { deleteGuestbookEntries, getGuestbookEntries } from '@/lib/db/action'
+import { useFormStatus } from 'react-dom'
 
 export default function GuestBook() {
   return (
@@ -12,6 +15,7 @@ export default function GuestBook() {
       </div>
       <Suspense>
         <GuestbookForm />
+        <GuestbookEntries />
       </Suspense>
     </>
   )
@@ -22,9 +26,29 @@ async function GuestbookForm() {
 
   return session?.user ? (
     <>
+      <Form />
       <SignOut />
     </>
   ) : (
     <SignIn />
   )
+}
+
+async function GuestbookEntries() {
+  const entries = await getGuestbookEntries()
+  const currentuserid = await auth()
+
+  if (entries.length === 0) {
+    return null
+  }
+
+  return entries.map((entry) => (
+    <div key={entry.id} className="mb-4 flex flex-col space-y-1">
+      <div className="w-full break-words text-sm">
+        {entry.user.id === currentuserid?.id && <DeleteEnt id={entry.id} />}
+        <span className="mr-1 text-neutral-600 dark:text-neutral-400">{entry.user.name}:</span>
+        {entry.body}
+      </div>
+    </div>
+  ))
 }
