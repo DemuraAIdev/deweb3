@@ -2,6 +2,7 @@ import NextAuth, { DefaultSession } from 'next-auth'
 import GitHub from 'next-auth/providers/github'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import prisma from './lib/prisma'
+import { PrismaClient } from '@prisma/client'
 
 declare module 'next-auth' {
   /**
@@ -21,7 +22,8 @@ export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  // workaround for prisma adapter cant be used with extends
+  adapter: PrismaAdapter(prisma as unknown as PrismaClient),
   providers: [
     GitHub({
       clientId: process.env.GITH_CLIENT_KEY as string,
