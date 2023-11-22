@@ -1,9 +1,12 @@
 'use server'
 
-import { prisma } from '@/lib/prisma'
+import prismaC from '@/lib/prisma'
 import { auth } from '@/auth'
 import { type Session } from 'next-auth'
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache'
+import { withAccelerate } from '@prisma/extension-accelerate'
+
+const prisma = prismaC.$extends(withAccelerate())
 
 type User = {
   [x: string]: string
@@ -90,6 +93,7 @@ export async function getGuestbookEntries() {
       updatedAt: true,
       user: true,
     },
+    cacheStrategy: { swr: 60, ttl: 60 },
   })
 
   return entries.map<GuestBookEntry>((entry) => ({
