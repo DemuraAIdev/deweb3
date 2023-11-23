@@ -12,8 +12,10 @@ export default function GuestBook() {
           Guestbook
         </h1>
       </div>
-      <GuestbookForm />
-      <GuestbookEntries />
+      <Suspense fallback={<div>Loading...</div>}>
+        <GuestbookForm />
+        <GuestbookEntries />
+      </Suspense>
     </>
   )
 }
