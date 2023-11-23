@@ -88,7 +88,13 @@ export async function getGuestbookEntries() {
       id: true,
       message: true,
       updatedAt: true,
-      user: true,
+      user: {
+        select: {
+          id: true,
+          name: true,
+          image: true,
+        },
+      },
     },
     cacheStrategy: { swr: 60 },
   })
