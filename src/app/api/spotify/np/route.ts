@@ -50,8 +50,8 @@ export async function GET() {
     const album = song.item?.album.name
     const albumImageUrl = song.item?.album.images[0].url
     const songUrl = song.item?.external_urls.spotify
-    const timestamp = formatTime(song.progress_ms)
-    const duration = formatTime(song.item?.duration_ms)
+    // const timestamp = formatTime(song.progress_ms)
+    // const duration = formatTime(song.item?.duration_ms)
 
     return NextResponse.json({
       album,
@@ -60,8 +60,8 @@ export async function GET() {
       isPlaying,
       songUrl,
       title,
-      timestamp,
-      duration,
+      // timestamp,
+      // duration,
     })
   }
 }

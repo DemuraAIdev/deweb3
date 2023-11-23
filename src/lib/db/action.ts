@@ -90,17 +90,8 @@ export async function getGuestbookEntries() {
       updatedAt: true,
       user: true,
     },
-    // cacheStrategy: { swr: 60, ttl: 60 },
+    cacheStrategy: { swr: 60 },
   })
 
-  return entries.map<GuestBookEntry>((entry) => ({
-    id: entry.id,
-    body: entry.message,
-    updated_at: entry.updatedAt.toISOString(),
-    user: {
-      id: entry.user!.id,
-      name: entry.user!.name!,
-      image: entry.user!.image!,
-    },
-  }))
+  return entries
 }
