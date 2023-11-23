@@ -96,7 +96,7 @@ export async function getGuestbookEntries() {
         },
       },
     },
-    cacheStrategy: { swr: 60 },
+    // cacheStrategy: { swr: 60 },
   })
 
   return entries
