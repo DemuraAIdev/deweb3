@@ -23,7 +23,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         </div>
         <div className="rounded-lg border-2 border-dotted border-gray-500 p-5 ">
           <TypedBios />
-          <p className="hover text-lg leading-7 text-black dark:text-gray-400">
+          <p className="hover text-lg leading-7 text-black dark:text-gray-400 ">
             I am a website developer, bot, graphic designer. I learned to make a website from 2019
           </p>
         </div>

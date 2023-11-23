@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/display-name */
 import React from 'react'
 import * as _jsx_runtime from 'react/jsx-runtime'
