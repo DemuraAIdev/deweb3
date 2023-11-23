@@ -39,7 +39,7 @@ function SubmitButton() {
       disabled={pending}
       type="submit"
     >
-      {pending ? 'Sending...' : <BiSolidPaperPlane />}
+      {pending ? '...' : <BiSolidPaperPlane />}
     </button>
   )
 }
