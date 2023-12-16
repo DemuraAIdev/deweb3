@@ -17,6 +17,18 @@ const projectsData = [
     imgSrc: '',
     href: 'https://github.com/DemuraAIdev/drm_framework',
   },
+  {
+    title: 'Technopark Website',
+    description: 'Technopark Website for SMKN 1 Kota Bengkulu, Indonesia',
+    imgSrc: '',
+    href: 'http://tepasystem.rf.gd/',
+  },
+  {
+    title: 'ARGA Game Engine',
+    description: 'ARGA Game Engine is a text based game engine',
+    imgSrc: '',
+    href: 'https://github.com/DemuraAIdev/ARGA',
+  },
 ]
 
 export default projectsData
