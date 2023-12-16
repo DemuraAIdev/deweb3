@@ -1,7 +1,6 @@
 import TypedBios from '@/components/typed'
 import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
-import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 import { getDictionary } from '@/dictionaries'
 import { Locale } from 'i18n-config'
 
@@ -17,7 +16,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
             text-transparent
             "
         >
-          <h1 className="tracking-tightest my-28 select-none text-7xl font-bold leading-none sm:my-10 ">
+          <h1 className="tracking-tightest my-20 select-none text-6xl font-bold leading-none sm:my-10 sm:text-7xl ">
             Abdul Vaiz Vahry Iskandar
           </h1>
         </div>

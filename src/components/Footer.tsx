@@ -66,10 +66,10 @@ export default function Footer({
           <SiGithub />
         </div>
       </section>
-      <div className=" flex items-center justify-center space-x-2 text-sm text-black dark:text-gray-400">
+      <div className=" flex justify-center space-x-2 text-sm text-black dark:text-gray-400">
         <div>{`© ${new Date().getFullYear()}`}</div>
         <Link href="/">
-          <span className="text-black dark:text-white">Vahry Iskandar</span>. All rights reserved.
+          <span className="text-black dark:text-white">VahryIskandar</span> Copyright
         </Link>
       </div>
       <LocaleSwitcher />
