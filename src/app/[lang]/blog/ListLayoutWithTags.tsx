@@ -83,6 +83,9 @@ export default function ListLayoutWithTags({
           <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
             Blog
           </h1>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            This is my blog where I write about things that I find interesting.
+          </p>
         </div>
         <div className="flex sm:space-x-24">
           <div>
@@ -92,21 +95,16 @@ export default function ListLayoutWithTags({
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
+                      <h2 className="text-lg font-bold leading-8 tracking-tight">
+                        <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                          {title}
+                        </Link>
+                      </h2>
                       <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date, config.locale)}</time>
                         </dd>
                       </dl>
-                      <div className="space-y-3">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
-                        </div>
-                      </div>
                     </article>
                   </li>
                 )
