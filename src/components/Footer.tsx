@@ -1,7 +1,6 @@
 import Link from '@/components/Link'
 import { headerNavLinks, ExternalLinks, OtherLinks } from '@/data/NavLinks'
 import NowPlaying from '@/components/NowPlaying'
-import LocaleSwitcher from './LangSwitch'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 export default function Footer() {
   return (
@@ -65,7 +64,6 @@ export default function Footer() {
           <span className="text-black dark:text-white">VahryIskandar</span> Copyright
         </Link>
       </div>
-      <LocaleSwitcher />
     </footer>
   )
 }
