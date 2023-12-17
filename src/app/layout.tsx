@@ -1,14 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './providers'
-import { Source_Code_Pro } from 'next/font/google'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
 import config from '@/data/config'
-import { getDictionary } from '@/dictionaries'
-
-const Source = Source_Code_Pro({ subsets: ['latin'] })
+import { GeistMono } from 'geist/font/mono'
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.siteURL),
@@ -48,7 +46,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={config.locale} className={`${Source.className} scroll-smooth `}>
+    <html lang={config.locale} className={`${GeistMono.className} scroll-smooth `}>
       <body className={`bg-white antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
