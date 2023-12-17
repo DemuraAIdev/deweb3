@@ -1,14 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './providers'
-import { Source_Code_Pro } from 'next/font/google'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
 import config from '@/data/config'
-import { getDictionary } from '@/dictionaries'
-
-const Source = Source_Code_Pro({ subsets: ['latin'] })
+import { GeistMono } from 'geist/font/mono'
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.siteURL),
@@ -40,29 +38,22 @@ export const metadata: Metadata = {
   },
 }
 
-import { Locale, i18n } from 'i18n-config'
+// import { Locale, i18n } from 'i18n-config'
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
-}
+// export async function generateStaticParams() {
+//   return i18n.locales.map((locale) => ({ lang: locale }))
+// }
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: { lang: Locale }
-}) {
-  const dictionary = await getDictionary(params.lang)
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={params.lang} className={`${Source.className} scroll-smooth `}>
+    <html lang={config.locale} className={`${GeistMono.className} scroll-smooth `}>
       <body className={`bg-white antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
             <div className="flex h-screen  flex-col justify-between sm:ml-1">
               <Header />
               <main className="mb-auto ">{children}</main>
-              <Footer dictionary={dictionary.footer} />
+              <Footer />
             </div>
           </SectionContainer>
         </Providers>

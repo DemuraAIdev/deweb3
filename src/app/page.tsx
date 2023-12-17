@@ -1,11 +1,9 @@
 import TypedBios from '@/components/typed'
 import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
-import { getDictionary } from '@/dictionaries'
 import { Locale } from 'i18n-config'
 
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang)
+export default async function Home() {
   return (
     <>
       <div className="h-screen space-y-2 pb-8 pt-5 md:space-y-5 md:lg:mt-20 ">
@@ -27,7 +25,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           </p>
         </div>
       </div>
-      <SectionMini dictionary={dictionary.SectionMini} />
+      <SectionMini />
       <Commits />
     </>
   )
