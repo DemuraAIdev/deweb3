@@ -94,18 +94,18 @@ export default function ListLayoutWithTags({
                 const { path, date, title, summary, tags } = post
                 return (
                   <li key={path} className="py-5">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <h2 className="text-lg font-bold leading-8 tracking-tight">
-                        <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                    <Link href={`/${path}`}>
+                      <article className="flex flex-col space-y-2 xl:space-y-0">
+                        <h2 className="text-lg font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
                           {title}
-                        </Link>
-                      </h2>
-                      <dl>
-                        <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date, config.locale)}</time>
-                        </dd>
-                      </dl>
-                    </article>
+                        </h2>
+                        <dl>
+                          <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
+                            <time dateTime={date}>{formatDate(date, config.locale)}</time>
+                          </dd>
+                        </dl>
+                      </article>
+                    </Link>
                   </li>
                 )
               })}

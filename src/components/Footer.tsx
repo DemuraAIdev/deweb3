@@ -3,16 +3,7 @@ import { headerNavLinks, ExternalLinks, OtherLinks } from '@/data/NavLinks'
 import NowPlaying from '@/components/NowPlaying'
 import LocaleSwitcher from './LangSwitch'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
-export default function Footer({
-  dictionary,
-}: {
-  dictionary: {
-    navigation: string
-    other: string
-    external: string
-    powered: string
-  }
-}) {
+export default function Footer() {
   return (
     <footer className="mt-10 ">
       <div className="mb-10">
@@ -20,7 +11,7 @@ export default function Footer({
       </div>
       <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 md:grid-cols-3">
         <div className="flex flex-col space-y-4">
-          <p className="font-bold">{dictionary.navigation}</p>
+          <p className="font-bold">Navigation</p>
           {headerNavLinks.map((link) => (
             <div key={link.title}>
               <Link
@@ -33,7 +24,7 @@ export default function Footer({
           ))}
         </div>
         <div className="flex flex-col space-y-4">
-          <p className="font-bold">{dictionary.other}</p>
+          <p className="font-bold">Other</p>
           {OtherLinks.map((link) => (
             <div key={link.title}>
               <Link
@@ -46,7 +37,7 @@ export default function Footer({
           ))}
         </div>
         <div className="flex flex-col space-y-4">
-          <p className="font-bold">{dictionary.external}</p>
+          <p className="font-bold">External</p>
           {ExternalLinks.map((link) => (
             <div key={link.title}>
               <Link
@@ -60,7 +51,7 @@ export default function Footer({
         </div>
       </div>
       <section className="">
-        <h1 className=" text-center text-sm font-bold">{dictionary.powered}</h1>
+        <h1 className=" text-center text-sm font-bold">This Website Powered By</h1>
         <div className="flex items-center justify-center gap-2 p-2 text-2xl">
           <SiNextdotjs />
           <SiTailwindcss />
