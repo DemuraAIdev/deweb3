@@ -4,6 +4,7 @@ import type { MDXComponents } from 'mdx/types'
 import Image from './Image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
+import { RoughNotation } from 'react-rough-notation'
 
 function Callout(props) {
   return (
@@ -21,4 +22,5 @@ export const components: MDXComponents = {
   pre: Pre,
   table: TableWrapper,
   Callout,
+  RoughNotation,
 }

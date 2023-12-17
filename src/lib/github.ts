@@ -5,6 +5,7 @@ interface Commit {
   url: string
   time: string
   avatar?: string
+  html_url?: string
 }
 
 export async function getLatestCommits(username: string, repo: string): Promise<Commit[]> {
@@ -25,6 +26,7 @@ export async function getLatestCommits(username: string, repo: string): Promise<
         year: 'numeric',
       }),
       avatar: commitData.author?.avatar_url,
+      html_url: commitData.html_url,
     })
   }
 

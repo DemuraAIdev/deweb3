@@ -10,7 +10,7 @@ interface CardProp {
 export default function Card({ title, description, imgSrc, href }: CardProp) {
   return (
     <div className="w-full p-4 md:w-1/2">
-      <div className="flex h-full flex-col justify-between rounded-lg border-2 border-dotted border-gray-500 bg-white p-5 hover:scale-[1.03] dark:bg-[#111010]">
+      <div className="flex h-full transform flex-col justify-between rounded-lg border-2 border-dotted border-gray-500 bg-white p-5  transition duration-500 hover:scale-[1.03]  dark:bg-[#111010] dark:hover:bg-gray-800">
         {imgSrc &&
           (href ? (
             <Link href={href} aria-label={`Link to ${title}`} showIcon={false}>

@@ -16,7 +16,7 @@ export default function Commits() {
         <Suspense fallback={<div>Loading...</div>}>
           {data?.map((commit) => (
             <li key={commit.sha} className="mb-5">
-              <CustomLink href={commit.url} showIcon={false}>
+              <CustomLink href={commit.html_url} showIcon={false}>
                 <h2 className="text-md font-medium text-gray-900 dark:text-white">
                   {commit.message}
                 </h2>
