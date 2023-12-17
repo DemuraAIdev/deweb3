@@ -4,7 +4,7 @@ import NowPlaying from '@/components/NowPlaying'
 import { SiNextdotjs, SiTailwindcss, SiVercel, SiGithub } from 'react-icons/si'
 export default function Footer() {
   return (
-    <footer className="mt-10 ">
+    <footer className=" mt-10">
       <div className="mb-10">
         <NowPlaying />
       </div>
@@ -58,7 +58,7 @@ export default function Footer() {
           <SiGithub />
         </div>
       </section>
-      <div className=" flex justify-center space-x-2 text-sm text-black dark:text-gray-400">
+      <div className="mb-7 flex justify-center space-x-2 text-sm text-black dark:text-gray-400">
         <div>{`© ${new Date().getFullYear()}`}</div>
         <Link href="/">
           <span className="text-black dark:text-white">VahryIskandar</span> Copyright
