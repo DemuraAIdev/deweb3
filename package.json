@@ -19,6 +19,7 @@
     "@types/unist": "^3.0.2",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
+    "geist": "^1.2.0",
     "github-slugger": "^2.0.0",
     "image-size": "^1.0.2",
     "js-yaml": "^4.1.0",
