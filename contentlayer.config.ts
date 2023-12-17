@@ -12,8 +12,8 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import { remarkExtractFrontmatter } from './src/lib/plugin/remarkexfrontmatter'
 import { remarkCodeTitles } from './src/lib/plugin/recodetile'
-import remarkImgToJsx from './src/lib/plugin/reimgjsx'
-import extractTocHeadings from './src/lib/plugin/extTOC'
+import { remarkImgToJsx } from './src/lib/plugin/reimgjsx'
+import { extractTocHeadings } from './src/lib/plugin/toc-headings'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -61,7 +61,7 @@ function createTagCount(allBlogs) {
       })
     }
   })
-  writeFileSync('./src/app/[lang]/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs) {
@@ -128,7 +128,6 @@ export default makeSource({
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
-      //@ts-ignore
       remarkExtractFrontmatter,
       remarkGfm,
       remarkCodeTitles,

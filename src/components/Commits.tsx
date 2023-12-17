@@ -3,7 +3,7 @@
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import CustomLink from './Link'
-import { SiGithub } from 'react-icons/si'
+
 import { Suspense } from 'react'
 
 export default function Commits() {
@@ -28,7 +28,6 @@ export default function Commits() {
           ))}
         </Suspense>
       </ul>
-
     </section>
   )
 }

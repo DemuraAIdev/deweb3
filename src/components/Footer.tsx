@@ -35,25 +35,27 @@ export default function Footer({
         <div className="flex flex-col space-y-4">
           <p className="font-bold">{dictionary.other}</p>
           {OtherLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className=" text-black transition hover:text-primary-400 dark:text-zinc-400 dark:hover:text-primary-400"
-            >
-              {link.title}
-            </Link>
+            <div key={link.title}>
+              <Link
+                href={link.href}
+                className=" text-black transition hover:text-primary-400 dark:text-zinc-400 dark:hover:text-primary-400"
+              >
+                {link.title}
+              </Link>
+            </div>
           ))}
         </div>
         <div className="flex flex-col space-y-4">
           <p className="font-bold">{dictionary.external}</p>
           {ExternalLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className=" text-black transition hover:text-primary-400 dark:text-zinc-400 dark:hover:text-primary-400"
-            >
-              {link.title}
-            </Link>
+            <div key={link.title}>
+              <Link
+                href={link.href}
+                className=" text-black transition hover:text-primary-400 dark:text-zinc-400 dark:hover:text-primary-400"
+              >
+                {link.title}
+              </Link>
+            </div>
           ))}
         </div>
       </div>
