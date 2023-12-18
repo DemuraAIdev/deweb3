@@ -2,12 +2,10 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { slug } from 'github-slugger'
 import { formatDate } from '@/lib/formatDate'
 import { CoreContent } from '@/lib/utils'
 import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 // import siteMetadata from '@/data/siteMetadata'
 import config from '@/data/config'
 import tagData from 'src/app/tag-data.json'
