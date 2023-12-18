@@ -1,0 +1,14 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Vahry Iskandar</title>
+      <link>https://vahryiskandar.my.id//blog</link>
+      <description>This is Vahry Iskandar personal website</description>
+      <language>en-us</language>
+      <managingEditor>cyberaioff@gmail.com (Vahry Iskandar)</managingEditor>
+      <webMaster>cyberaioff@gmail.com (Vahry Iskandar)</webMaster>
+    <lastBuildDate>Mon, 18 Dec 2023 02:17:54 GMT</lastBuildDate>
+      <atom:link href="https://vahryiskandar.my.id//tags/update/feed.xml" rel="self" type="application/rss+xml"/>
+      
+    </channel>
+  </rss>
