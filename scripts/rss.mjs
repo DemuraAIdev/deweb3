@@ -2,7 +2,6 @@ import { writeFileSync, mkdirSync } from 'fs'
 import path from 'path'
 import GithubSlugger from 'github-slugger'
 import siteMetadata from '../src/data/config.js'
-import tagData from '../src/app/tag-data.json' assert { type: 'json' }
 import { allBlogs } from '../.contentlayer/generated/index.mjs'
 
 const slugger = new GithubSlugger()

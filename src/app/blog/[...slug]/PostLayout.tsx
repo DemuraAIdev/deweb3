@@ -29,7 +29,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+  const { filePath, path, slug, date, title, tags, readingTime } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -44,16 +44,19 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   {title}
                 </h1>
               </div>
-              <dl className="space-y-10">
-                <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
-                  </dd>
-                </div>
-              </dl>
+              <div className="flex justify-between ">
+                <dl className="space-y-10">
+                  <div>
+                    <dt className="sr-only">Published on</dt>
+                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <time dateTime={date}>
+                        {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                      </time>
+                    </dd>
+                  </div>
+                </dl>
+                <div className="text-gray-500 dark:text-gray-400">{readingTime.text}</div>
+              </div>
             </div>
           </header>
           <div className="">
