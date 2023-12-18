@@ -11,7 +11,7 @@ export default function NowPlaying() {
   // Update progress when data change
   return (
     <div className="rounded-lg bg-gray-200 p-4  dark:bg-gray-900">
-      <h1 className="mb-4 text-base font-medium">Now Playing - Spotify</h1>
+      <h1 className="mb-4 text-base font-medium">Abdul Vaiz Listening to - Spotify</h1>
       <div className=" flex items-center gap-1 sm:gap-2">
         {data?.songUrl ? (
           <>

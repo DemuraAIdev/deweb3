@@ -16,10 +16,20 @@ export const metadata: Metadata = {
   },
   description: config.description,
   alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en',
-      'id-ID': '/id',
+    canonical: './',
+    types: {
+      'application/rss+xml': `${config.siteURL}/feed.xml`,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   openGraph: {
