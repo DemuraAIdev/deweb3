@@ -23,7 +23,6 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
             alt={'count'}
             width={310}
             height={100}
-            unoptimized
           />
         </div>
         <div className={`prose dark:prose-dark xl:col-span-2 ${GeistSans.className}`}>

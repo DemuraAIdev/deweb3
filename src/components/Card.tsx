@@ -19,7 +19,7 @@ export default function Card({ title, description, imgSrc, href }: CardProp) {
                 <Image
                   alt={title}
                   src={imgSrc}
-                  className="object-cover object-center md:h-36 lg:h-48"
+                  className="rounded-lg object-cover object-center md:h-36  lg:h-48"
                   width={544}
                   height={306}
                 />

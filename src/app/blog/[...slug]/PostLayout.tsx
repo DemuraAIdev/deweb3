@@ -2,16 +2,13 @@ import { ReactNode } from 'react'
 import { CoreContent } from '@/lib/utils'
 import type { Blog, Authors } from 'contentlayer/generated'
 // import Comments from '@/components/Comments'
-import Link from '@/components/Link'
-// import PageTitle from '@/components/PageTitle'
-import Image from '@/components/Image'
 import { GeistSans } from 'geist/font/sans'
 import siteMetadata from '@/data/config'
 import ScrollTopAndComment from '@/components/ScrollTop'
 
-const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
-const discussUrl = (path) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
+// const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
+// const discussUrl = (path) =>
+//   `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
