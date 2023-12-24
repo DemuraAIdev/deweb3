@@ -1,6 +1,6 @@
 import { visit } from 'unist-util-visit'
 
-// src/mdx-plugins/remark-code-title.ts
+// Code By timlrx
 function remarkCodeTitles() {
   return (tree) =>
     visit(tree, 'code', (node, index, parent) => {

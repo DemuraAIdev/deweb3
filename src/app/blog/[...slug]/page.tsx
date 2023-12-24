@@ -12,11 +12,6 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/config'
 import { notFound } from 'next/navigation'
 
-const defaultLayout = 'PostLayout'
-const layouts = {
-  PostLayout,
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -84,9 +79,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   if (postIndex === -1) {
     return notFound()
   }
-
-  const prev = sortedCoreContents[postIndex + 1]
-  const next = sortedCoreContents[postIndex - 1]
   const post = allBlogs.find((p) => p.slug === slug) as Blog
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => {
@@ -102,17 +94,15 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     }
   })
 
-  const Layout = layouts[post.layout || defaultLayout]
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
+      <PostLayout content={mainContent} authorDetails={authorDetails}>
         <MDXRender code={post.body.code} components={components} toc={post.toc} />
-      </Layout>
+      </PostLayout>
     </>
   )
 }

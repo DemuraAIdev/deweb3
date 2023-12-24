@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit'
 import slugger from 'github-slugger'
 import { remark } from 'remark'
 
-// ../../node_modules/mdast-util-to-string/index.js
+// Code By timlrx
 function toString(node, options) {
   var { includeImageAlt = true } = options || {}
   return one(node, includeImageAlt)

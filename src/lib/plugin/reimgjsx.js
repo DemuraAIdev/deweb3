@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit'
 import { sync } from 'probe-image-size'
 import fs from 'fs'
 
-// src/mdx-plugins/remark-img-to-jsx.ts
+// Code By timlrx
 function remarkImgToJsx() {
   return (tree) => {
     visit(

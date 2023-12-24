@@ -1,7 +1,7 @@
 import { visit } from 'unist-util-visit'
 import yaml from 'js-yaml'
 
-// src/mdx-plugins/remark-extract-frontmatter.ts
+// Code By timlrx
 function remarkExtractFrontmatter() {
   return (tree, file) => {
     visit(tree, 'yaml', (node) => {
