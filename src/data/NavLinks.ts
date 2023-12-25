@@ -2,14 +2,12 @@ export const headerNavLinks = [
   { href: '/', title: 'Home' },
   { href: '/guestbook', title: 'Guestbook' },
   { href: '/blog', title: 'Blog' },
-  { href: '/projects', title: 'Projects' },
   { href: '/about', title: 'About' },
 ]
 
 export const OtherLinks = [
-  { href: '/sitemap.xml', title: 'Sitemap' },
-  { href: '/feed.xml', title: 'RSS' },
   { href: '/tools', title: 'Tools' },
+  { href: '/projects', title: 'Projects' },
 ]
 
 export const ExternalLinks = [
