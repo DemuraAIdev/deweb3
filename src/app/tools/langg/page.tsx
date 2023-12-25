@@ -29,7 +29,8 @@ export default function LangG() {
   return (
     <>
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        Bahasa G adalah bahasa slang indonesia di tahun 90an.
+        Bahasa G adalah sebuah bahasa rahasia yang populer di kalangan pelajar generasi 90-an di
+        Indonesia.
       </p>
       <form className="relative max-w-[500px]" onSubmit={handleSubmitTranslate}>
         <input
