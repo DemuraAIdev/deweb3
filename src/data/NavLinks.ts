@@ -9,6 +9,7 @@ export const headerNavLinks = [
 export const OtherLinks = [
   { href: '/sitemap.xml', title: 'Sitemap' },
   { href: '/feed.xml', title: 'RSS' },
+  { href: '/tools', title: 'Tools' },
 ]
 
 export const ExternalLinks = [

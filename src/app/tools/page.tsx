@@ -1,5 +1,6 @@
 import CardMini from '@/components/CardMini'
-
+import { genPageMetadata } from '../seo'
+export const metadata = genPageMetadata({ title: 'Tools' })
 export default async function Tools() {
   return (
     <>
