@@ -20,10 +20,10 @@ export default function Parralax() {
           className="transform rounded-xl bg-gradient-to-r 
             from-[#3B82F6] via-[#FF9685]  to-[#F9F871] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "
         >
-          <CustomLink href="/blog">
+          <CustomLink href="/tools">
             <div className="flex h-full flex-col justify-between  rounded-lg bg-white p-6 transition hover:bg-transparent dark:bg-dark">
-              <span className=" text-3xl font-bold">Blog</span>
-              <p>Blog that i write</p>
+              <span className=" text-3xl font-bold">Tools</span>
+              <p>The tools I make</p>
             </div>
           </CustomLink>
         </li>
