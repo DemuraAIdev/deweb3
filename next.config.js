@@ -15,10 +15,6 @@ module.exports = () => {
     async rewrites() {
       return [
         {
-          source: '/:path*',
-          destination: `/:path*`,
-        },
-        {
           source: '/tools/dencrypt',
           destination: 'http://localhost:3001/tools/dencrypt',
         },
