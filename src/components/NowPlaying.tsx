@@ -10,7 +10,7 @@ export default function NowPlaying() {
 
   // Update progress when data change
   return (
-    <div className="rounded-lg border-2 border-spotify-green p-4 shadow-xl transition duration-500  hover:scale-[1.05] dark:border-gray-700 dark:bg-[#111010]  dark:shadow-none dark:hover:border-spotify-green dark:hover:bg-gray-800">
+    <div className="rounded-lg border-2 border-spotify-green p-4 shadow-xl transition duration-300  hover:scale-[1.05] dark:border-gray-700 dark:bg-[#111010]  dark:shadow-none dark:hover:border-spotify-green dark:hover:bg-gray-800">
       <h1 className="mb-4 text-base font-medium">Abdul Vaiz Listening to - Spotify</h1>
       <div className=" flex items-center gap-1 sm:gap-2">
         {data?.songUrl ? (
