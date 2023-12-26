@@ -98,6 +98,7 @@ export default function ListLayoutWithTags({
                           {title}
                         </h2>
                         <dl>
+                          <dt className="sr-only">Published on</dt>
                           <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
                             <time dateTime={date}>{formatDate(date, config.locale)}</time>
                           </dd>

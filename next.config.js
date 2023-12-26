@@ -5,11 +5,28 @@ const { withContentlayer } = require('next-contentlayer')
  **/
 module.exports = () => {
   const plugins = [withContentlayer]
+
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
+    },
+    async rewrites() {
+      return [
+        {
+          source: '/:path*',
+          destination: `/:path*`,
+        },
+        {
+          source: '/tools/dencrypt',
+          destination: 'http://localhost:3001/tools/dencrypt',
+        },
+        {
+          source: '/tools/dencrypt/:path*',
+          destination: `http://localhost:3001/tools/dencrypt/:path*`,
+        },
+      ]
     },
     images: {
       dangerouslyAllowSVG: true,
