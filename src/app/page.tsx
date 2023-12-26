@@ -1,6 +1,7 @@
 import TypedBios from '@/components/typed'
 import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
+import Logo from './logo.svg'
 
 export default async function Home() {
   return (
@@ -24,6 +25,7 @@ export default async function Home() {
           </p>
         </div>
       </div>
+
       {/* <div className="relative w-full">
         <div className="absolute -left-4 top-0 hidden h-72 w-72 animate-blob rounded-full bg-[#5bb8e9] opacity-60 blur-3xl md:block"></div>
         <div className="animation-delay-2000 absolute -right-4 top-0 hidden h-72 w-72 animate-blob rounded-full bg-[#6EE7B7] opacity-60 blur-3xl md:block "></div>

@@ -7,15 +7,17 @@ import { getGuestbookEntries } from '@/lib/db/action'
 export default function GuestBook() {
   return (
     <>
-      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
-          Guestbook
-        </h1>
+      <div>
+        <div className=" space-y-2 pb-8 pt-6 md:space-y-5">
+          <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
+            Guestbook
+          </h1>
+        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <GuestbookForm />
+          <GuestbookEntries />
+        </Suspense>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <GuestbookForm />
-        <GuestbookEntries />
-      </Suspense>
     </>
   )
 }
