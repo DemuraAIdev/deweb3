@@ -8,7 +8,6 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 // import siteMetadata from '@/data/siteMetadata'
 import config from '@/data/config'
-import tagData from 'src/app/tag-data.json'
 
 interface PaginationProps {
   totalPages: number
@@ -68,9 +67,6 @@ export default function ListLayoutWithTags({
   pagination,
 }: ListLayoutProps) {
   const pathname = usePathname()
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 

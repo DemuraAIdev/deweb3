@@ -3,12 +3,7 @@ const colors = require('tailwindcss/colors')
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -71,6 +66,10 @@ const config: Config = {
         '9/16': '56.25%',
         0.75: '0.1875rem',
       },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)'],
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
@@ -85,7 +84,7 @@ const config: Config = {
         light: '#F9F6EE',
         dark: '#111010',
       },
-      typography: (theme: (arg0: string) => any) => ({
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),

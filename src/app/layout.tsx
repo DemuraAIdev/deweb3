@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
 import config from '@/data/config'
 import { GeistMono } from 'geist/font/mono'
+import { GeistSans } from 'geist/font/sans'
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.siteURL),
@@ -56,11 +57,14 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={config.locale} className={`${GeistMono.className} scroll-smooth `}>
+    <html
+      lang={config.locale}
+      className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`}
+    >
       <body className={`bg-white antialiased dark:bg-dark`}>
         <Providers>
           <SectionContainer>
-            <div className="flex h-screen  flex-col justify-between sm:ml-1">
+            <div className="flex h-screen  flex-col justify-between font-mono  sm:ml-1">
               <Header />
               <main className="mb-auto ">{children}</main>
               <SpeedInsights />

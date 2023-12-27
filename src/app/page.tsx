@@ -1,7 +1,6 @@
 import TypedBios from '@/components/typed'
 import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
-import Logo from './logo.svg'
 
 export default async function Home() {
   return (
