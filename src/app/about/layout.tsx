@@ -1,7 +1,6 @@
 import Image from '@/components/Image'
 import { coreContent } from '@/lib/utils'
 import { Authors, allAuthors } from 'contentlayer/generated'
-import { GeistSans } from 'geist/font/sans'
 
 const author = allAuthors.find((p) => p.slug === 'default') as Authors
 const mainContent = coreContent(author)
@@ -25,9 +24,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
             height={100}
           />
         </div>
-        <div className={`prose dark:prose-dark xl:col-span-2 ${GeistSans.className}`}>
-          {children}
-        </div>
+        <div className={`prose font-sans dark:prose-dark xl:col-span-2`}>{children}</div>
       </div>
     </>
   )
