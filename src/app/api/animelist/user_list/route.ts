@@ -1,9 +1,6 @@
 import { getUserWatchAnime } from '@/lib/myanimelist'
 import { NextRequest, NextResponse } from 'next/server'
 // export const runtime = 'edge'
-export const dynamic = {
-  refresh: '1 day',
-}
 import type { UserWatchAnime } from '@/lib/myanimelist'
 
 export async function GET(request: NextRequest, { params }: { params: { status: string } }) {
