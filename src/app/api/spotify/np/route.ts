@@ -1,4 +1,4 @@
-import { getNowPlaying } from '@/lib/apotify'
+import { getNowPlaying, getRecentPlayed } from '@/lib/apotify'
 import { NextResponse } from 'next/server'
 export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
@@ -13,10 +13,14 @@ export interface NowPlayingSong {
 
 export async function GET() {
   const response = await getNowPlaying()
+  const recentlyPlayed = await getRecentPlayed()
   if (response.status === 401) {
-    return NextResponse.json({ isPlaying: false, title: 'Spotify is not connected' })
+    return NextResponse.json({
+      isPlaying: false,
+      title: 'Spotify is not connected',
+    })
   } else if (response.status === 204 || response.status > 400) {
-    return NextResponse.json({ isPlaying: false })
+    return NextResponse.json({ isPlaying: false, recentlyPlayed: await recentlyPlayed })
   }
   const song = await response.json()
 
