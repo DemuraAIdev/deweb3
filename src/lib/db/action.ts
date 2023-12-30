@@ -53,6 +53,7 @@ export async function saveGuestMessage(formData: FormData) {
   })
 
   revalidatePath('/guestbook')
+  return NewG
 }
 
 export async function deleteGuestbookEntries(idEntries: string) {
