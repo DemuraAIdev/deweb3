@@ -1,5 +1,4 @@
 'use client'
-import Link from '@/components/Link'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import Image from '@/components/Image'

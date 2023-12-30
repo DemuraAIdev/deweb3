@@ -10,7 +10,10 @@ export default async function Projects() {
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 ">
           Project
         </h1>
-        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Project that im work</p>
+        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          My project that I have done. I hope you like it. This project showcases my skills in web
+          development and design. I have also contributed to open source projects .
+        </p>
       </div>
       <div className="container py-12">
         <div className="-m-4 flex flex-wrap">

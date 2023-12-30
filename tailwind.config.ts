@@ -83,6 +83,7 @@ const config: Config = {
         gray: colors.neutral,
         light: '#F9F6EE',
         dark: '#111010',
+        background: 'hsl(var(--background))',
       },
       typography: ({ theme }) => ({
         DEFAULT: {

@@ -12,7 +12,7 @@ export default function Anime() {
         <Link href={'/anime/completed'} showIcon={false} aria-label={`Link to /anime/completed`}>
           <div className="flex h-full transform flex-col justify-between rounded-lg border-2 border-dotted border-gray-500 bg-white p-2  transition duration-500 hover:scale-[1.03]  dark:bg-[#111010] dark:hover:bg-gray-800">
             <div className="p-6">
-              <h2 className="text-2xl font-bold leading-8 tracking-tight">Completed</h2>
+              <h2 className="select-none text-2xl font-bold leading-8 tracking-tight">Completed</h2>
             </div>
           </div>
         </Link>
