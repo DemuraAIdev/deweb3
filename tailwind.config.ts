@@ -42,12 +42,12 @@ const config: Config = {
             height: '0.75rem',
           },
           '50%': {
-            height: '0.375rem',
+            height: '1.100rem',
           },
         },
         expand: {
           '0% , 100%': {
-            height: '0.375rem',
+            height: '1.100rem',
           },
           '50%': {
             height: '0.75rem',
@@ -83,6 +83,7 @@ const config: Config = {
         gray: colors.neutral,
         light: '#F9F6EE',
         dark: '#111010',
+        background: 'hsl(var(--background))',
       },
       typography: ({ theme }) => ({
         DEFAULT: {

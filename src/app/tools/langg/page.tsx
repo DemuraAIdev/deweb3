@@ -19,7 +19,13 @@ export default function LangG() {
         Indonesia.
       </p>
 
+      <h3 className="text-medium font-medium tracking-tight text-gray-900 dark:text-gray-100 ">
+        Ubah Kata ke Bahasa G
+      </h3>
       <TranslateC />
+      <h3 className="text-medium font-medium tracking-tight text-gray-900 dark:text-gray-100 ">
+        Ubah Bahasa G ke Kata
+      </h3>
       <ReverseTranslate />
     </>
   )

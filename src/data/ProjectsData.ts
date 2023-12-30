@@ -20,13 +20,13 @@ const projectsData = [
   },
   {
     title: 'ZERON (Discontinue)',
-    description: `Open Source DIscord Bot`,
+    description: `Open Source DIscord Bot, Rich feel, customizable, and easy to use.`,
     imgSrc: '/images/project/zeron.png',
     href: 'https://github.com/DemuraAIdev/ZERON',
   },
   {
     title: 'DRM (Discontinue)',
-    description: `Mini PHP Framework`,
+    description: `Mini PHP Framework, easy to use, and secure.`,
     imgSrc: '',
     href: 'https://github.com/DemuraAIdev/drm_framework',
   },

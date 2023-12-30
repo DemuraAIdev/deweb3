@@ -48,9 +48,20 @@ export const getTopTracks = async () => {
 export const getRecentPlayed = async () => {
   const { access_token } = await getAccessToken()
 
-  return fetch(RECENT_TRACKS_ENDPOINT, {
+  const response = await fetch(RECENT_TRACKS_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
   })
+
+  const data = await response.json()
+  const recentTrack = data.items[0] // Get the first item from the response array
+
+  const trackName = recentTrack.track.name
+  const artistName = recentTrack.track.artists[0].name
+  const albumName = recentTrack.track.album.name
+  const trackPhoto = recentTrack.track.album.images[0].url // Get the URL of the first image
+  const songUrl = recentTrack.track.external_urls.spotify // Get the URL of the song
+
+  return { trackName, artistName, albumName, trackPhoto, songUrl }
 }
