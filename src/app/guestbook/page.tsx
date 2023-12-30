@@ -3,6 +3,9 @@ import { SignIn, SignOut, DeleteEnt } from './button'
 import { Suspense } from 'react'
 import Form from './form'
 import { getGuestbookEntries } from '@/lib/db/action'
+import { genPageMetadata } from '../seo'
+
+export const metadata = genPageMetadata({ title: 'Guestbook' })
 
 export default function GuestBook() {
   return (

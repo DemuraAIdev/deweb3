@@ -1,5 +1,7 @@
 import Link from '@/components/Link'
+import { genPageMetadata } from '../seo'
 
+export const metadata = genPageMetadata({ title: 'Anime' })
 export default function Anime() {
   return (
     <div>

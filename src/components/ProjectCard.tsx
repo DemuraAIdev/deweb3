@@ -6,13 +6,19 @@ interface CardProp {
   description: string
   imgSrc?: string
   href?: string
+  discontinued?: boolean
 }
 
-export default function Card({ title, description, imgSrc, href }: CardProp) {
+export default function ProjectCard({ title, description, imgSrc, href, discontinued }: CardProp) {
   return (
     <div className="w-full p-4 md:w-1/2">
       {/* <div className="flex h-full transform flex-col justify-between rounded-lg border-2 border-dotted border-gray-500 bg-white p-5  transition duration-500 hover:scale-[1.03]  dark:bg-[#111010] dark:hover:bg-gray-800"> */}
-      <article className="hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dotted border-gray-500 p-5 transition-transform duration-500 hover:scale-[1.03]">
+      <article
+        className={
+          'hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dotted border-gray-500 p-5 transition-transform duration-500' +
+          (discontinued ? ' opacity-50 hover:border-red-600 ' : ' hover:scale-[1.03]')
+        }
+      >
         <Link href={href!} showIcon={false} aria-label={`Link to ${title}`}>
           <figure className="relative aspect-video overflow-hidden">
             {imgSrc ? (

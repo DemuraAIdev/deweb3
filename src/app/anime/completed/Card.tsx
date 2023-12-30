@@ -1,5 +1,8 @@
+import { genPageMetadata } from '@/app/seo'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
+
+export const metadata = genPageMetadata({ title: 'Anime-Completed' })
 export default function CardMini({
   title,
   picture,

@@ -1,6 +1,6 @@
 import { genPageMetadata } from '../seo'
 import projectsData from '@/data/ProjectsData'
-import Card from '@/components/Card'
+import Card from '@/components/ProjectCard'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 export default async function Projects() {
@@ -23,6 +23,7 @@ export default async function Projects() {
               title={d.title}
               description={d.description}
               imgSrc={d.imgSrc}
+              discontinued={d.discontinued}
               href={d.href}
             />
           ))}
