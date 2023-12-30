@@ -30,7 +30,7 @@ export default function NowPlaying() {
           </h1>
         ) : (
           <h1 className="text-base font-medium">
-            last Played...{' '}
+            last Played :{' '}
             <Link
               className="max-w-max truncate text-sm hover:text-spotify-green"
               href={'https://open.spotify.com/'}
