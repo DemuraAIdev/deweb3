@@ -100,3 +100,19 @@ export const getAnime = async (id: string) => {
 
   return data
 }
+
+// search anime
+export const searchAnime = async (query: string) => {
+  const { access_token } = await getAccessToken()
+
+  const response = await fetch(`https://api.myanimelist.net/v2/anime?q=${query}&limit=10`, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+    cache: 'force-cache',
+  })
+
+  const data = await response.json()
+
+  return data
+}
