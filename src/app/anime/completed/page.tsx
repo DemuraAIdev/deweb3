@@ -3,9 +3,7 @@ import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import { Suspense } from 'react'
 import CardMini from '../Card'
-import { genPageMetadata } from '@/app/seo'
 
-export const metadata = genPageMetadata({ title: 'Anime-Completed' })
 export default function Anime() {
   const { data } = useSWR('/api/animelist/user_list?status=completed', fetcher)
   return (
