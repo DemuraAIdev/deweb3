@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
@@ -67,11 +68,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <div className="flex h-screen  flex-col justify-between font-mono  sm:ml-1">
               <Header />
               <main className="mb-auto ">{children}</main>
-              <SpeedInsights />
+
               <Footer />
             </div>
           </SectionContainer>
         </Providers>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

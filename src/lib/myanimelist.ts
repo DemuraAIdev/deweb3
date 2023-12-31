@@ -116,3 +116,22 @@ export const searchAnime = async (query: string) => {
 
   return data
 }
+
+// get my rating anime
+export const getMyRatingAnime = async (id: string) => {
+  const { access_token } = await getAccessToken()
+
+  const response = await fetch(
+    `https://api.myanimelist.net/v2/anime/${id}/my_list_status?fields=score`,
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+      cache: 'force-cache',
+    }
+  )
+
+  const data = await response.json()
+
+  return data
+}
