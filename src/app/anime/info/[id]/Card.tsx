@@ -24,7 +24,6 @@ interface CardMiniProps {
   }
 }
 export default function CardMini({ data }: CardMiniProps) {
-  console.log(data)
   return (
     // Use grid and grid-cols-2 for medium screens and above
     <div className="mb-4 w-full border-2 border-dotted p-5 dark:border-gray-700 dark:bg-[#111010] md:grid md:grid-cols-2">
