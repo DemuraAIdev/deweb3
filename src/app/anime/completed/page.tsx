@@ -5,7 +5,7 @@ import { Suspense } from 'react'
 import CardMini from '../Card'
 
 export default function Anime() {
-  const { data } = useSWR('/api/animelist/user_list?status=completed', fetcher)
+  const { data } = useSWR('/api/animelist/user_list?  status=completed', fetcher)
   return (
     <div>
       <div className=" space-y-2 pb-8 pt-6 md:space-y-5">
