@@ -10,7 +10,6 @@ export default function TypedBios() {
       stringsElement: '#bios',
       typeSpeed: 40,
       loop: true,
-      backDelay: 1000,
       smartBackspace: true,
       fadeOut: true,
       cursorChar: '_',
@@ -25,7 +24,7 @@ export default function TypedBios() {
         <li>I love NODEJS.</li>
         <li>I love EDM music.</li>
       </ul>
-      <span ref={el} className="text-lg text-neutral-900 dark:text-neutral-200" />
+      <span ref={el} className="select-none text-lg text-neutral-900 dark:text-neutral-200" />
     </>
   )
 }

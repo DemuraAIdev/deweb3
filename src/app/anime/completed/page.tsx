@@ -1,9 +1,8 @@
 'use client'
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
-import Image from '@/components/Image'
 import { Suspense } from 'react'
-import CardMini from './Card'
+import CardMini from '../Card'
 
 export default function Anime() {
   const { data } = useSWR('/api/animelist/user_list?status=completed', fetcher)
@@ -26,6 +25,7 @@ export default function Anime() {
           {data?.map((item) => (
             <CardMini
               key={item.node.id}
+              id={item.node.id}
               title={item.node.title}
               picture={item.node.main_picture}
               score={item.list_status.score}

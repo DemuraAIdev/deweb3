@@ -1,8 +1,6 @@
 'use client'
-
-import { AnchorHTMLAttributes } from 'react'
-import CustomLink from './Link'
 import { usePathname } from 'next/navigation'
+import CustomLink from '@/components/Link'
 
 export default function NavLink({
   href,
@@ -14,8 +12,7 @@ export default function NavLink({
   className?: string
 }) {
   const isActive = usePathname() === href
-  const baseClassName =
-    'hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-800 sm:block sm:px-3 sm:py-2 md:inline-block'
+  const baseClassName = 'hidden transition-all sm:block sm:pr-3 md:inline-block'
 
   const activeStyles =
     'font-semibold text-black hover:text-black dark:text-white dark:hover:text-white'

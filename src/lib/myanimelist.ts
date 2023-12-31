@@ -33,6 +33,8 @@ export const getAccessToken = async () => {
       grant_type: 'refresh_token',
       refresh_token: refresh_token!,
     }),
+
+    next: { revalidate: 3600 },
   })
 
   return response.json()
@@ -41,7 +43,7 @@ export const getAccessToken = async () => {
 export const getUserWatchAnime = async (status: string) => {
   const { access_token } = await getAccessToken()
 
-  const animeList: UserWatchAnime[] = [] // Add type annotation for animeList array
+  const animeList: UserWatchAnime[] = []
 
   let nextPage = `https://api.myanimelist.net/v2/users/@me/animelist?fields=list_status`
 
@@ -49,18 +51,34 @@ export const getUserWatchAnime = async (status: string) => {
     nextPage += `&status=${status}`
   }
 
-  while (nextPage) {
-    const response = await fetch(nextPage, {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+  const fetchAnimePage = async (pageUrl: string) => {
+    const response = await fetch(pageUrl, {
+      headers: { Authorization: `Bearer ${access_token}` },
+      next: { revalidate: 86400 },
     })
 
     const { data, paging } = await response.json()
 
     animeList.push(...data)
-    nextPage = paging?.next
+
+    return paging?.next
   }
+
+  const fetchAllAnimePages = async () => {
+    const pages: string[] = [] // Explicitly define the type of the 'pages' array as an array of strings
+
+    while (nextPage) {
+      pages.push(nextPage)
+      nextPage = await fetchAnimePage(nextPage)
+    }
+
+    return pages
+  }
+
+  const allPages = await fetchAllAnimePages()
+  const animeResponses = await Promise.all(allPages.map(fetchAnimePage))
+
+  // Process any remaining anime responses if needed
 
   return animeList
 }
@@ -68,13 +86,35 @@ export const getUserWatchAnime = async (status: string) => {
 export const getAnime = async (id: string) => {
   const { access_token } = await getAccessToken()
 
-  const response = await fetch(`https://api.myanimelist.net/v2/anime/${id}`, {
+  const response = await fetch(
+    `https://api.myanimelist.net/v2/anime/${id}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_episodes,start_season,source,average_episode_duration,rating,background,studios,statistics`,
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+      cache: 'force-cache',
+    }
+  )
+
+  const data = await response.json()
+
+  return data
+}
+
+// search anime
+export const searchAnime = async (query: string) => {
+  const { access_token } = await getAccessToken()
+
+  const response = await fetch(`https://api.myanimelist.net/v2/anime?q=${query}&limit=10`, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    cache: 'force-cache',
   })
 
   const data = await response.json()
 
   return data
 }
+
+// get my rating anime

@@ -3,12 +3,15 @@ import { SignIn, SignOut, DeleteEnt } from './button'
 import { Suspense } from 'react'
 import Form from './form'
 import { getGuestbookEntries } from '@/lib/db/action'
+import { genPageMetadata } from '../seo'
+
+export const metadata = genPageMetadata({ title: 'Guestbook' })
 
 export default function GuestBook() {
   return (
     <>
       <div>
-        <div className=" space-y-2 pb-8 pt-6 md:space-y-5">
+        <div className=" mb-4 space-y-2 pt-6 md:space-y-5">
           <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
             Guestbook
           </h1>

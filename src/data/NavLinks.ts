@@ -9,6 +9,8 @@ export const headerNavLinks = [
 export const OtherLinks = [
   { href: '/tools', title: 'Tools' },
   { href: '/projects', title: 'Projects' },
+  { href: '/activity/code', title: 'Activity' },
+  { href: '/anime', title: 'AnimeList' },
 ]
 
 export const ExternalLinks = [

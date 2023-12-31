@@ -1,12 +1,17 @@
 import Link from '@/components/Link'
+import { genPageMetadata } from '../seo'
 
+export const metadata = genPageMetadata({ title: 'Anime' })
 export default function Anime() {
   return (
     <div>
       <div className=" space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
-          MyAnimeWatchList
+          Anime Watch List
         </h1>
+        <p className="leading-7 text-gray-500 dark:text-gray-400">
+          This data powered By MyAnimeList
+        </p>
       </div>
       <div className="w-full md:w-1/2">
         <Link href={'/anime/completed'} showIcon={false} aria-label={`Link to /anime/completed`}>
