@@ -21,7 +21,6 @@ const SearchBar = () => {
       try {
         const response = await fetch(`http://localhost:3000/api/animelist/search?q=${searchTerm}`)
         const { data } = await response.json()
-        console.log(data)
         setSearchResults(data)
       } catch (error) {
         console.error('Error fetching data:', error)
