@@ -41,7 +41,7 @@ export const getAccessToken = async () => {
 export const getUserWatchAnime = async (status: string) => {
   const { access_token } = await getAccessToken()
 
-  const animeList: UserWatchAnime[] = [] // Add type annotation for animeList array
+  const animeList: UserWatchAnime[] = []
 
   let nextPage = `https://api.myanimelist.net/v2/users/@me/animelist?fields=list_status`
 
@@ -49,8 +49,8 @@ export const getUserWatchAnime = async (status: string) => {
     nextPage += `&status=${status}`
   }
 
-  while (nextPage) {
-    const response = await fetch(nextPage, {
+  const fetchAnimePage = async (pageUrl: string) => {
+    const response = await fetch(pageUrl, {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
@@ -59,8 +59,25 @@ export const getUserWatchAnime = async (status: string) => {
     const { data, paging } = await response.json()
 
     animeList.push(...data)
-    nextPage = paging?.next
+
+    return paging?.next
   }
+
+  const fetchAllAnimePages = async () => {
+    const pages: string[] = [] // Explicitly define the type of the 'pages' array as an array of strings
+
+    while (nextPage) {
+      pages.push(nextPage)
+      nextPage = await fetchAnimePage(nextPage)
+    }
+
+    return pages
+  }
+
+  const allPages = await fetchAllAnimePages()
+  const animeResponses = await Promise.all(allPages.map(fetchAnimePage))
+
+  // Process any remaining anime responses if needed
 
   return animeList
 }

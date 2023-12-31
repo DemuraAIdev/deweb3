@@ -13,9 +13,9 @@ export default function CardMini({
   score: number
 }) {
   return (
-    <div className="w-full p-2 md:w-1/2">
+    <div className="w-full p-4 md:w-1/2">
       <Link href={'/anime/completed'} showIcon={false} aria-label={`Link to /anime/completed`}>
-        <article className="hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dotted border-gray-500 p-5 transition-transform duration-500 hover:scale-[1.03]">
+        <article className="hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dotted border-gray-500 p-5 ">
           <h2 className="mb-3 truncate text-2xl font-bold leading-8 tracking-tight">{title}</h2>
           <figure className="relative aspect-video overflow-hidden">
             <Image
