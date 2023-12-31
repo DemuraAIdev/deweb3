@@ -1,5 +1,6 @@
 import NavLink from './NavLink'
 import { Suspense } from 'react'
+import MobileNav from './MoNav'
 
 const headerNavLinks = [
   { href: '/activity/code', title: 'ActivityCode' },
@@ -18,6 +19,7 @@ const Header = () => {
             <NavLink key={link.title} href={link.href} text={link.title} className="sm:space-x-8" />
           ))}
         </Suspense>
+        <MobileNav />
       </nav>
     </header>
   )
