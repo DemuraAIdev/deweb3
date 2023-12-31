@@ -14,19 +14,20 @@ export default function NavLink({
   className?: string
 }) {
   const isActive = usePathname() === href
+  const baseClassName =
+    'hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-800 sm:block sm:px-3 sm:py-2 md:inline-block'
+
+  const activeStyles =
+    'font-semibold text-black hover:text-black dark:text-white dark:hover:text-white'
+  const inactiveStyles =
+    'font-medium text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white'
+
+  const combinedClassName = `${baseClassName} ${isActive ? activeStyles : inactiveStyles} ${
+    className || ''
+  }`
 
   return (
-    <CustomLink
-      key={text}
-      href={href}
-      className={
-        isActive
-          ? 'hidden rounded-lg p-1 font-semibold text-black transition-all hover:bg-gray-200 hover:text-black  dark:text-white dark:hover:bg-gray-800 dark:hover:text-white sm:block sm:px-3 sm:py-2 md:inline-block ' +
-            className
-          : 'hidden rounded-lg p-1 font-medium text-gray-500 transition-all hover:bg-gray-200 hover:text-black  dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white sm:block sm:px-3 sm:py-2 md:inline-block ' +
-            className
-      }
-    >
+    <CustomLink key={text} href={href} className={combinedClassName}>
       {text}
     </CustomLink>
   )
