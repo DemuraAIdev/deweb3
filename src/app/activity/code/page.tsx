@@ -12,7 +12,7 @@ export default async function ActivityPage() {
             <p className="flex w-44 shrink-0 items-center gap-x-2 ">{item.range.text}</p>
             <div className="bg-muted hidden h-1 w-full rounded md:block">
               <div
-                className="h-1 rounded border-b-4 border-dashed"
+                className="h-1 rounded border-b-4 border-dashed border-neutral-700 dark:border-neutral-200"
                 style={{
                   width: `${
                     ((item.grand_total.total_seconds - minTotalSeconds) /
