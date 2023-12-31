@@ -34,10 +34,10 @@ export default function NowPlaying() {
             <Link
               className="max-w-max truncate text-sm hover:text-spotify-green"
               href={'https://open.spotify.com/'}
-              title={data?.recentlyPlayed.trackName}
+              title={data?.recentlyPlayed.trackName ?? 'Ads'}
               showIcon={false}
             >
-              {data?.recentlyPlayed.trackName}
+              {data?.recentlyPlayed.trackName ?? 'Ads'}
             </Link>{' '}
             <span className="font-semibold text-gray-300"> By </span>
             <span className="text-gray-500 dark:text-gray-400">
