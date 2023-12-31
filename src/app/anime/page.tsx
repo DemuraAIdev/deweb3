@@ -9,7 +9,7 @@ export default function Anime() {
         <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
           Anime Watch List
         </h1>
-        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        <p className="leading-7 text-gray-500 dark:text-gray-400">
           This data powered By MyAnimeList
         </p>
       </div>

@@ -14,7 +14,7 @@ export default function LangG() {
       <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 ">
         Lang G
       </h2>
-      <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+      <p className=" leading-7 text-gray-500 dark:text-gray-400">
         Bahasa G adalah sebuah bahasa rahasia yang populer di kalangan pelajar generasi 90-an di
         Indonesia.
       </p>

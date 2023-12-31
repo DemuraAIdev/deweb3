@@ -73,11 +73,11 @@ export default function ListLayoutWithTags({
   return (
     <>
       <div>
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <div className="mb-4 space-y-2 pt-6 md:space-y-5">
           <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
             Blog
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          <p className="leading-7 text-gray-500 dark:text-gray-400">
             This is my blog where I write about things that I find interesting.
           </p>
         </div>
