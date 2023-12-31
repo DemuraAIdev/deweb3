@@ -33,6 +33,8 @@ export const getAccessToken = async () => {
       grant_type: 'refresh_token',
       refresh_token: refresh_token!,
     }),
+
+    next: { revalidate: 3600 },
   })
 
   return response.json()
@@ -51,9 +53,8 @@ export const getUserWatchAnime = async (status: string) => {
 
   const fetchAnimePage = async (pageUrl: string) => {
     const response = await fetch(pageUrl, {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+      headers: { Authorization: `Bearer ${access_token}` },
+      next: { revalidate: 86400 },
     })
 
     const { data, paging } = await response.json()
@@ -89,6 +90,7 @@ export const getAnime = async (id: string) => {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    cache: 'force-cache',
   })
 
   const data = await response.json()
