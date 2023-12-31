@@ -19,7 +19,7 @@ const SearchBar = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/animelist/search?q=${searchTerm}`)
+        const response = await fetch(`/api/animelist/search?q=${searchTerm}`)
         const { data } = await response.json()
         setSearchResults(data)
       } catch (error) {
