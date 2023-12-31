@@ -7,7 +7,7 @@ export default function CardMini({
   id,
 }: {
   title: string
-  picture: { large: string }
+  picture: { large: string; medium: string }
   id: string
 }) {
   return (
@@ -18,12 +18,11 @@ export default function CardMini({
           <figure className="relative aspect-video overflow-hidden">
             <Image
               alt={title}
-              src={picture.large}
+              src={picture.medium}
               className="rounded-lg object-cover object-center"
               quality={10}
               fill
               sizes="100%"
-              priority
             />
           </figure>
         </article>
