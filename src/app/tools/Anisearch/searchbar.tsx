@@ -8,6 +8,7 @@ interface SearchResult {
     title: string
     main_picture: {
       large: string
+      medium: string
     }
   }
 }
