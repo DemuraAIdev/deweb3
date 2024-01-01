@@ -34,7 +34,6 @@ export default function CardMini({ data }: CardMiniProps) {
         quality={10}
         width={500}
         height={500}
-        priority
       />
       <div className="space-y-4 sm:ml-4">
         <div className="grid grid-cols-2 ">
