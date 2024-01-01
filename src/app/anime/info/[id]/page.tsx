@@ -5,10 +5,14 @@ import fetcher from '@/lib/fetcher'
 import CardMini from './Card'
 
 export default function Page({ params }: { params: { id: string } }) {
-  const { data } = useSWR(`/api/animelist/getinfo/${params.id}`, fetcher)
+  const { data, isValidating } = useSWR(`/api/animelist/getinfo/${params.id}`, fetcher)
 
   if (data?.error === 'not_found') {
     return <h1>404 - Not Found</h1>
+  }
+
+  if (isValidating) {
+    return <h1>Loading...</h1>
   }
 
   return (
