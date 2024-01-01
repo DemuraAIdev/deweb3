@@ -24,19 +24,13 @@ export default function Page({ params }: { params: { id: string } }) {
         </p>
       </div>
       <div className="flex">
-        <Suspense fallback={<h1>Loading...</h1>}>
-          <CardMini data={data} />
-        </Suspense>
+        <CardMini data={data} />
       </div>
       <div className="space-y-3">
         <h2 className=" text-3xl font-semibold">Synopsis </h2>
         <p className="mt-3 font-sans">{data?.synopsis || 'Loading'}</p>
         <h2 className=" text-3xl font-semibold">Background </h2>
-        {data?.background ? (
-          <p className="mt-3 font-sans">{data?.background || 'Loading'}</p>
-        ) : (
-          <p>No data</p>
-        )}
+        <p className="mt-3 font-sans">{data?.background || 'Loading'}</p>
       </div>
     </div>
   )
