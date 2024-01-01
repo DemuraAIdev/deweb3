@@ -3,16 +3,13 @@
 import useSWR from 'swr'
 import fetcher from '@/lib/fetcher'
 import CardMini from './Card'
+import { Suspense } from 'react'
 
 export default function Page({ params }: { params: { id: string } }) {
   const { data, isValidating } = useSWR(`/api/animelist/getinfo/${params.id}`, fetcher)
 
   if (data?.error === 'not_found') {
     return <h1>404 - Not Found</h1>
-  }
-
-  if (isValidating) {
-    return <h1>Loading...</h1>
   }
 
   return (
@@ -27,7 +24,9 @@ export default function Page({ params }: { params: { id: string } }) {
         </p>
       </div>
       <div className="flex">
-        <CardMini data={data} />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <CardMini data={data} />
+        </Suspense>
       </div>
       <div className="space-y-3">
         <h2 className=" text-3xl font-semibold">Synopsis </h2>
