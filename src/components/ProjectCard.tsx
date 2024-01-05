@@ -20,11 +20,11 @@ export default function ProjectCard({ title, description, imgSrc, href, disconti
         }
       >
         <Link
-          data-umami-event="Project links"
-          data-umami-event-project={title}
           href={href!}
           showIcon={false}
           aria-label={`Link to ${title}`}
+          data-umami-event="Project links"
+          data-umami-event-project={title}
         >
           <figure className="relative aspect-video overflow-hidden">
             {imgSrc ? (
