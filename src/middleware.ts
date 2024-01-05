@@ -18,10 +18,17 @@ export function middleware(request: NextRequest) {
   response.headers.set('default-src', "'self'")
   response.headers.set('script-src', "'self' 'unsafe-inline' 'unsafe-eval' *.vahryiskandar.my.id")
   response.headers.set('style-src', "'self' 'unsafe-inline' *.vahryiskandar.my.id")
-  response.headers.set(
-    'img-src',
-    "'self' data: *.vahryiskandar.my.id *.githubusercontent.com a.ppy.sh *.github.com"
-  )
+  const ContentSecurityPolicy = `
+        default-src 'self';
+        script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vahryiskandar.my.id giscus.app;
+        child-src  *.youtube.com *.google.com *.twitter.com giscus.app;
+        style-src 'self' 'unsafe-inline' 'unsafe-eval';
+        font-src 'self';
+        img-src 'self' data: *.vahryiskandar.my.id *.google.com *.githubusercontent.com *.github.com *.giscus.app;
+        worker-src 'self' *.youtube.com *.google.com *.twitter.com;
+        connect-src *;
+    `
+  response.headers.set('Content-Security-Policy', ContentSecurityPolicy.replace(/\n/g, ''))
 
   return response
 }
