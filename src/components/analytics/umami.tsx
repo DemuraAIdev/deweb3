@@ -7,7 +7,6 @@ const UmamiScript = () => {
     <>
       <Script
         async
-        defer
         data-website-id={analytics.umami.websiteId}
         src={analytics.umami.url} // Replace with your umami instance
       />
