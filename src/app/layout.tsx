@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Providers } from './providers'
-import { Analytics } from '@vercel/analytics/react'
+import Analytics from '@/components/analytics'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/Container'
