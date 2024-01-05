@@ -29,33 +29,28 @@ export default function ProjectCard({ title, description, imgSrc, href, disconti
           <figure className="relative aspect-video overflow-hidden">
             {imgSrc ? (
               <>
-                {href ? (
-                  <Link href={href} aria-label={`Link to ${title}`} showIcon={false}>
-                    <Image
-                      alt={title}
-                      src={imgSrc}
-                      className="rounded-lg object-cover object-center"
-                      blurDataURL={imgSrc}
-                      placeholder="blur"
-                      quality={10}
-                      fill
-                      sizes="100%"
-                      priority
-                    />
-                  </Link>
-                ) : (
-                  <Image
-                    alt={title}
-                    src={imgSrc}
-                    className="rounded-lg object-cover object-center"
-                    blurDataURL={imgSrc}
-                    placeholder="blur"
-                    quality={10}
-                    fill
-                    sizes="100%"
-                    priority
-                  />
-                )}
+                <Image
+                  alt={title}
+                  src={imgSrc}
+                  className="rounded-lg object-cover object-center"
+                  blurDataURL={imgSrc}
+                  placeholder="blur"
+                  quality={10}
+                  fill
+                  sizes="100%"
+                  priority
+                />
+                <Image
+                  alt={title}
+                  src={imgSrc}
+                  className="rounded-lg object-cover object-center"
+                  blurDataURL={imgSrc}
+                  placeholder="blur"
+                  quality={10}
+                  fill
+                  sizes="100%"
+                  priority
+                />
               </>
             ) : (
               <div className="flex h-36 w-full items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700">
