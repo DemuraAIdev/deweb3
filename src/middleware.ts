@@ -4,7 +4,6 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   // Clone the request headers and set a new header `x-hello-from-middleware1`
   const requestHeaders = new Headers(request.headers)
-  requestHeaders.set('x-hello-from-middleware1', 'hello')
 
   // You can also set request headers in NextResponse.rewrite
   const response = NextResponse.next({
@@ -16,6 +15,13 @@ export function middleware(request: NextRequest) {
 
   // Set the Access-Control-Allow-Origin header
   response.headers.set('Access-Control-Allow-Origin', '*')
+  response.headers.set('default-src', "'self'")
+  response.headers.set('script-src', "'self' 'unsafe-inline' 'unsafe-eval' *.vahryiskandar.my.id")
+  response.headers.set('style-src', "'self' 'unsafe-inline' *.vahryiskandar.my.id")
+  response.headers.set(
+    'img-src',
+    "'self' data: *.vahryiskandar.my.id *.githubusercontent.com a.ppy.sh *.github.com"
+  )
 
   return response
 }
