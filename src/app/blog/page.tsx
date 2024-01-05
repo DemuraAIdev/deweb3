@@ -1,4 +1,4 @@
-import ListLayout from './ListLayoutWithTags'
+import ListLayout from './ListLayout'
 import { allCoreContent, sortPosts } from '@/lib/utils'
 import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from '../seo'

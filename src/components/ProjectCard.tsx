@@ -19,7 +19,12 @@ export default function ProjectCard({ title, description, imgSrc, href, disconti
           (discontinued ? ' opacity-50 hover:border-red-600 ' : ' hover:scale-[1.03]')
         }
       >
-        <Link href={href!} showIcon={false} aria-label={`Link to ${title}`}>
+        <Link
+          data-umami-event-project={title}
+          href={href!}
+          showIcon={false}
+          aria-label={`Link to ${title}`}
+        >
           <figure className="relative aspect-video overflow-hidden">
             {imgSrc ? (
               <>
