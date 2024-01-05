@@ -88,7 +88,11 @@ export default function ListLayoutWithTags({
                 const { path, date, title, summary, tags } = post
                 return (
                   <li key={path} className="py-5">
-                    <Link href={`/${path}`} data-umami-event-blog={title}>
+                    <Link
+                      href={`/${path}`}
+                      data-umami-event="Blog links"
+                      data-umami-event-blog={title}
+                    >
                       <article className="flex flex-col space-y-2 xl:space-y-0">
                         <h2 className="text-lg font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
                           {title}

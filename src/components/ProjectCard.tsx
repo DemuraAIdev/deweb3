@@ -20,6 +20,7 @@ export default function ProjectCard({ title, description, imgSrc, href, disconti
         }
       >
         <Link
+          data-umami-event="Project links"
           data-umami-event-project={title}
           href={href!}
           showIcon={false}
