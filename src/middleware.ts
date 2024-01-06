@@ -15,21 +15,21 @@ export function middleware(request: NextRequest) {
 
   // Set the Access-Control-Allow-Origin header
   response.headers.set('Access-Control-Allow-Origin', '*')
-  response.headers.set('default-src', "'self'")
-  response.headers.set('script-src', "'self' 'unsafe-inline' 'unsafe-eval' *.vahryiskandar.my.id")
-  response.headers.set('style-src', "'self' 'unsafe-inline' *.vahryiskandar.my.id")
-  const ContentSecurityPolicy = `
-        default-src 'self';
-        script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vahryiskandar.my.id giscus.app;
-        child-src  *.youtube.com *.google.com *.twitter.com giscus.app;
-        style-src 'self' 'unsafe-inline' 'unsafe-eval';
-        font-src 'self';
-        img-src 'self' data: *.vahryiskandar.my.id *.google.com *.githubusercontent.com *.github.com *.giscus.app;
-        worker-src 'self' *.youtube.com *.google.com *.twitter.com;
-        connect-src *;
-    `
-  response.headers.set('Content-Security-Policy', ContentSecurityPolicy.replace(/\n/g, ''))
-  response.headers.set('X-Content-Type-Options', 'nosniff')
+  // response.headers.set('default-src', "'self'")
+  // response.headers.set('script-src', "'self' 'unsafe-inline' 'unsafe-eval' *.vahryiskandar.my.id")
+  // response.headers.set('style-src', "'self' 'unsafe-inline' *.vahryiskandar.my.id")
+  // const ContentSecurityPolicy = `
+  //       default-src 'self';
+  //       script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vahryiskandar.my.id giscus.app;
+  //       child-src  *.youtube.com *.google.com *.twitter.com giscus.app;
+  //       style-src 'self' 'unsafe-inline' 'unsafe-eval';
+  //       font-src 'self';
+  //       img-src 'self' data: *.vahryiskandar.my.id *.google.com *.githubusercontent.com *.github.com *.giscus.app;
+  //       worker-src 'self' *.youtube.com *.google.com *.twitter.com;
+  //       connect-src *;
+  //   `
+  // response.headers.set('Content-Security-Policy', ContentSecurityPolicy.replace(/\n/g, ''))
+  // response.headers.set('X-Content-Type-Options', 'nosniff')
 
   return response
 }
