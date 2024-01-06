@@ -7,13 +7,14 @@ export default function CustomLink({
   className,
   showIcon = true,
   onClick,
+  ...rest
 }: CustomLinkType) {
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
 
   if (isInternalLink || isAnchorLink) {
     return (
-      <Link className={className} href={href} onClick={onClick}>
+      <Link className={className} href={href} onClick={onClick} {...rest}>
         {children}
       </Link>
     )
@@ -26,6 +27,7 @@ export default function CustomLink({
       rel="noopener noreferrer"
       className={`items-center ${className ? className : ''}`}
       onClick={onClick}
+      {...rest}
     >
       {children}
       {showIcon && (
