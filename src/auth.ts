@@ -1,9 +1,8 @@
-import NextAuth, { DefaultSession } from 'next-auth'
-import GitHub from 'next-auth/providers/github'
 import { PrismaAdapter } from '@auth/prisma-adapter'
-import prisma from './lib/prisma'
+import { prisma } from './lib/prisma'
 import { PrismaClient } from '@prisma/client'
 
+import NextAuth, { DefaultSession } from 'next-auth'
 declare module 'next-auth' {
   /**
    * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
@@ -18,18 +17,13 @@ declare module 'next-auth' {
   }
 }
 
-export const {
-  handlers: { GET, POST },
-  auth,
-} = NextAuth({
-  // workaround for prisma adapter cant be used with extends
-  adapter: PrismaAdapter(prisma as unknown as PrismaClient),
-  providers: [
-    GitHub({
-      clientId: process.env.GITH_CLIENT_KEY as string,
-      clientSecret: process.env.GITH_CLIENT_SECRET as string,
-    }),
-  ],
+import GitHub from 'next-auth/providers/github'
+
+import type { NextAuthConfig } from 'next-auth'
+
+export const config = {
+  adapter: PrismaAdapter(prisma),
+  providers: [GitHub],
   pages: {
     signIn: '/sign-in',
   },
@@ -39,4 +33,6 @@ export const {
       return Promise.resolve(session)
     },
   },
-})
+} satisfies NextAuthConfig
+
+export const { handlers, auth, signIn, signOut } = NextAuth(config)
