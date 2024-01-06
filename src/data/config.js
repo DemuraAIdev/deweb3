@@ -10,7 +10,7 @@ const config = {
   repo: 'https://github.com/DemuraAIdev/deweb3',
   analytics: {
     umami: {
-      websiteId: 'd623d012-da9d-4ad5-9a1c-77bf6268a102',
+      websiteId: '3ffa1a37-a7e1-44ca-bd8a-4507e10f39fe',
       url: 'https://umami.vahryiskandar.my.id/script.js',
     },
   },
