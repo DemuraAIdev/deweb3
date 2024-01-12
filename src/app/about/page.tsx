@@ -5,6 +5,7 @@ import { genPageMetadata } from '../seo'
 import Image from '@/components/Image'
 import { coreContent } from '@/lib/utils'
 import { Authors, allAuthors } from 'contentlayer/generated'
+import { GoPersonFill } from 'react-icons/go'
 
 const author = allAuthors.find((p) => p.slug === 'default') as Authors
 const mainContent = coreContent(author)
@@ -15,13 +16,13 @@ export default function Home() {
     <>
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
-          About
+          About <GoPersonFill className="inline-block" />
         </h1>
       </div>
       <div className="items-start">
         <div className="mb-2">
           <Image
-            src={'https://count.vahryiskandar.my.id/get/@cyberai2323?theme=rule34'}
+            src={'https://countdemura.glitch.me/get/@cyberai2323?theme=rule34'}
             alt={'count'}
             width={310}
             height={100}

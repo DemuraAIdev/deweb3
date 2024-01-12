@@ -16,4 +16,5 @@ export const OtherLinks = [
 export const ExternalLinks = [
   { href: 'https://github.com/DemuraAIdev', title: 'GitHub' },
   { href: 'https://twitter.com/Abdulvaiz2', title: 'Twitter' },
+  { href: 'https://www.linkedin.com/in/abdul-vaiz-vi/', title: 'LinkedIn' },
 ]

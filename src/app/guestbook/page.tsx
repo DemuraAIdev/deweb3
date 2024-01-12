@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import Form from './form'
 import { getGuestbookEntries } from '@/lib/db/action'
 import { genPageMetadata } from '../seo'
+import { FaAddressBook } from 'react-icons/fa'
 
 export const metadata = genPageMetadata({ title: 'Guestbook' })
 
@@ -13,7 +14,7 @@ export default function GuestBook() {
       <div>
         <div className=" mb-4 space-y-2 pt-6 md:space-y-5">
           <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
-            Guestbook
+            Guestbook <FaAddressBook className="inline-block" />
           </h1>
         </div>
         <Suspense fallback={<div>Loading...</div>}>

@@ -11,8 +11,15 @@ export default function NowPlaying() {
 
   // Update progress when data change
   return (
-    <div className="line-clamp-1 flex justify-between rounded-lg border-2 border-spotify-green p-4  shadow-xl transition duration-300  hover:scale-[1.05] dark:border-gray-700 dark:bg-[#111010] dark:shadow-none dark:hover:border-spotify-green dark:hover:bg-gray-800">
+    <div className="line-clamp-1 flex rounded-lg  ">
       {/* {data?.isPlaying && data?.songUrl && <MusicEqualizer />} */}
+      <div className="pr-4  ">
+        {data?.isPlaying ? (
+          <FaSpotify className="animate-pulse text-2xl text-spotify-green" />
+        ) : (
+          <FaSpotify className=" text-2xl text-spotify-green" />
+        )}
+      </div>
       <div>
         {data?.songUrl ? (
           <h1 className="text-base font-medium">
@@ -43,20 +50,9 @@ export default function NowPlaying() {
             <span className="text-gray-500 dark:text-gray-400">
               {data?.recentlyPlayed?.artistName || 'Spotify'}
             </span>
-            <span className="font-semibold text-gray-300"> On </span>
-            <span className="text-gray-500 dark:text-gray-400">
-              {data?.recentlyPlayed?.albumName || 'Spotify'}
-            </span>
           </h1>
         )}
         {/* {data?.isPlaying && data?.songUrl && <MusicEqualizer />} */}
-      </div>
-      <div>
-        {data?.isPlaying ? (
-          <FaSpotify className="animate-pulse text-2xl text-spotify-green" />
-        ) : (
-          <FaSpotify className=" text-2xl text-spotify-green" />
-        )}
       </div>
     </div>
   )

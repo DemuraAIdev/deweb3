@@ -8,6 +8,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 // import siteMetadata from '@/data/siteMetadata'
 import config from '@/data/config'
+import { IoNewspaper } from 'react-icons/io5'
 
 interface PaginationProps {
   totalPages: number
@@ -60,7 +61,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   )
 }
 
-export default function ListLayoutWithTags({
+export default function ListLayoutWith({
   posts,
   title,
   initialDisplayPosts = [],
@@ -75,7 +76,7 @@ export default function ListLayoutWithTags({
       <div>
         <div className="mb-4 space-y-2 pt-6 md:space-y-5">
           <h1 className="text-4xl font-bold  tracking-tight text-gray-900 dark:text-gray-100">
-            Blog
+            Blog <IoNewspaper className="inline-block" />
           </h1>
           <p className="leading-7 text-gray-500 dark:text-gray-400">
             This is my blog where I write about things that I find interesting.
