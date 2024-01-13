@@ -22,7 +22,7 @@ export default function ProjectCard({ title, description, imgSrc, href, disconti
       {/* <div className="flex h-full transform flex-col justify-between rounded-lg border-2 border-dotted border-gray-500 bg-white p-5  transition duration-500 hover:scale-[1.03]  dark:bg-[#111010] dark:hover:bg-gray-800"> */}
       <article
         className={
-          'hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dotted border-gray-500 p-5 transition-transform duration-500' +
+          'hover:shadow-secondary group h-full overflow-hidden rounded-md border-2 border-dashed border-gray-500 p-5 transition-transform duration-500' +
           (discontinued ? ' opacity-50 hover:border-red-600 ' : ' hover:scale-[1.03]')
         }
       >

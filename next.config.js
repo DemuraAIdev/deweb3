@@ -41,7 +41,7 @@ module.exports = () => {
         },
         {
           protocol: 'https',
-          hostname: 'count.vahryiskandar.my.id',
+          hostname: 'countdemura.glitch.me',
         },
         {
           protocol: 'https',

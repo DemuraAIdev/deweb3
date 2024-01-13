@@ -22,7 +22,7 @@ export default function TypedBios() {
       <ul id="bios" className="hidden">
         <li>I live in indonesia.</li>
         <li>I love NODEJS.</li>
-        <li>I love EDM music.</li>
+        <li>I love J-Core, EDM, DnB Liquid music.</li>
       </ul>
       <span ref={el} className="select-none text-lg text-neutral-900 dark:text-neutral-200" />
     </>
