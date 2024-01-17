@@ -88,7 +88,7 @@ export default function ListLayoutWith({
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
-                  <li key={path} className="py-5">
+                  <li key={path} className="py-5 hover:opacity-60">
                     <Link
                       href={`/${path}`}
                       // data-umami-event="Blog-links"
