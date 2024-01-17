@@ -48,7 +48,7 @@ async function GuestbookEntries() {
   }
 
   return entries.map((entry) => (
-    <div key={entry.id} className="mb-4 flex flex-col space-y-1">
+    <div key={entry.id} className="mb-1 flex flex-col space-y-1">
       <div className="w-full break-words text-sm">
         {entry.user?.id === currentuserid?.id && <DeleteEnt id={entry.id} />}
         <span className="mr-1 text-neutral-600 dark:text-neutral-400">{entry.user?.name}:</span>

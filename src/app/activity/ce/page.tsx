@@ -15,7 +15,7 @@ export default async function ActivityPage() {
               />
               {item.name}
             </div>
-            <div className="bg-muted hidden h-1 w-full rounded md:block">
+            <div className=" hidden h-1 w-full rounded bg-neutral-600 md:block">
               <div
                 className="h-1 rounded border-b-4 border-dashed border-neutral-700 dark:border-neutral-200"
                 style={{
