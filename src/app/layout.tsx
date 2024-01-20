@@ -66,7 +66,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <SectionContainer>
             <div className="flex h-screen  flex-col justify-between font-mono  sm:ml-1">
               <Header />
-              <main className="mb-auto ">{children}</main>
+              <main className="mb-auto">{children}</main>
 
               <Footer />
             </div>

@@ -23,14 +23,60 @@ export default async function Home() {
             I am a website developer, bot, graphic designer. I learned to make a website from 2019
           </p>
         </div>
+        {/* <svg
+          id="visual"
+          viewBox="0 0 900 450"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          className="absolute inset-x-0 hidden w-full md:block"
+        >
+          <path
+            d="M0 118L90 118L90 103L180 103L180 153L270 153L270 133L360 133L360 112L450 112L450 138L540 138L540 155L630 155L630 75L720 75L720 116L810 116L810 61L900 61"
+            fill="none"
+            stroke-linecap="square"
+            stroke-linejoin="miter"
+            stroke="#1a1818"
+            stroke-width="12"
+          ></path>
+        </svg> */}
+        <svg
+          id="visual"
+          viewBox="0 0 900 450"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          className="absolute inset-x-0 hidden w-full md:block"
+        >
+          <path
+            d="M0 118L15 115.5C30 113 60 108 90 113.8C120 119.7 150 136.3 180 141.3C210 146.3 240 139.7 270 132.8C300 126 330 119 360 119.8C390 120.7 420 129.3 450 136.5C480 143.7 510 149.3 540 138.8C570 128.3 600 101.7 630 95.2C660 88.7 690 102.3 720 100C750 97.7 780 79.3 810 72.2C840 65 870 69 885 71L900 73"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="miter"
+            stroke="#1a1818"
+            stroke-width="20"
+          ></path>
+        </svg>
       </div>
-
-      {/* <div className="relative w-full">
-        <div className="absolute -left-4 top-0 hidden h-72 w-72 animate-blob rounded-full bg-[#5bb8e9] opacity-60 blur-3xl md:block"></div>
-        <div className="animation-delay-2000 absolute -right-4 top-0 hidden h-72 w-72 animate-blob rounded-full bg-[#6EE7B7] opacity-60 blur-3xl md:block "></div>
-        <div className="animation-delay-4000 absolute -bottom-8 left-40 hidden h-72 w-72 animate-blob rounded-full bg-[#3B82F6] opacity-60 blur-3xl md:block"></div>
-      </div> */}
       <SectionMini />
+      {/* <svg
+        id="visual"
+        viewBox="0 0 900 450"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        className="absolute inset-x-0 z-0 hidden w-full md:block"
+      >
+        <path
+          d="M0 330L90 330L90 345L180 345L180 295L270 295L270 315L360 315L360 336L450 336L450 310L540 310L540 293L630 293L630 373L720 373L720 332L810 332L810 387L900 387"
+          fill="none"
+          stroke-linecap="square"
+          stroke-linejoin="miter"
+          stroke="#1a1818"
+          stroke-width="12"
+        ></path>
+      </svg> */}
+
       <Commits />
     </>
   )
