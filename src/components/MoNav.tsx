@@ -19,7 +19,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <button type="button" className=" md:hidden" aria-label="Toggle Menu" onClick={onToggleNav}>
+      <button type="button" className="sm:hidden" aria-label="Toggle Menu" onClick={onToggleNav}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"

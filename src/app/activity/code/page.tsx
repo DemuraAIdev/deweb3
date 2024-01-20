@@ -10,9 +10,9 @@ export default async function ActivityPage() {
         {data.reverse().map((item) => (
           <pre className="flex items-center justify-between" key={item.range.date}>
             <p className="flex w-44 shrink-0 items-center gap-x-2 ">{item.range.text}</p>
-            <div className="bg-muted hidden h-1 w-full rounded md:block">
+            <div className="bg-muted hidden h-1 w-full rounded bg-neutral-600 md:block">
               <div
-                className="h-1 rounded border-b-4 border-dashed border-neutral-700 dark:border-neutral-200"
+                className="h-1 rounded border-b-4 border-neutral-700 dark:border-neutral-200"
                 style={{
                   width: `${
                     ((item.grand_total.total_seconds - minTotalSeconds) /
