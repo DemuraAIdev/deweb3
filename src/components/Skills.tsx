@@ -3,7 +3,7 @@ import CustomLink from './Link'
 export default function Parralax() {
   return (
     <>
-      <ul className="grid list-none grid-cols-1 gap-7 divide-y">
+      <ul className="grid list-none grid-cols-1 gap-7 divide-y ">
         <li
           className="transform rounded-xl bg-gradient-to-r 
             from-[#6EE7B7] via-[#3B82F6]  to-[#9333EA] p-[5px] shadow-xl transition-all hover:scale-[1.01]  dark:shadow-none "

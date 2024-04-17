@@ -30,7 +30,7 @@ export default function Commits() {
         </Suspense>
       </ul>
       <CustomLink
-        href="https://beta.vahryiskandar.my.id"
+        href="https://beta.vahry.my.id"
         className="mb-8 inline-flex w-fit items-center rounded border border-neutral-200 bg-neutral-50 p-1 px-3 py-2 text-sm leading-4 text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
         data-umami-event="WebsiteBeta button"
       >
