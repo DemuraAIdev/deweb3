@@ -17,12 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     priority: 0.9,
+    changeFrequency: 'daily',
   }))
 
   const indexRoute = {
     url: siteUrl,
     lastModified: new Date().toISOString().split('T')[0],
     priority: 1,
+    changeFrequency: 'never',
   }
 
   return [indexRoute, ...routes, ...blogRoutes]

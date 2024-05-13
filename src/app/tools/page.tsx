@@ -9,7 +9,7 @@ export default async function Tools() {
         <div className="-m-4 flex flex-wrap">
           <CardMini href="/tools/langg" description="Bahasa G Translator" title="Lang G" />
           <CardMini
-            href="/tools/Anisearch"
+            href="https://anime.vahry.my.id/"
             description="MyAnimeList API wrapper"
             title="Search Nime"
           />
