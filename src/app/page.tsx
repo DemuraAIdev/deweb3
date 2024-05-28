@@ -46,15 +46,14 @@ export default async function Home() {
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           version="1.1"
-          className="absolute inset-x-0 hidden w-full md:block"
+          className="absolute inset-x-0 hidden w-full dark:stroke-[#1a1818] md:block"
         >
           <path
             d="M0 118L15 115.5C30 113 60 108 90 113.8C120 119.7 150 136.3 180 141.3C210 146.3 240 139.7 270 132.8C300 126 330 119 360 119.8C390 120.7 420 129.3 450 136.5C480 143.7 510 149.3 540 138.8C570 128.3 600 101.7 630 95.2C660 88.7 690 102.3 720 100C750 97.7 780 79.3 810 72.2C840 65 870 69 885 71L900 73"
             fill="none"
             strokeLinecap="round"
-            stroke-linejoin="miter"
-            stroke="#1a1818"
-            stroke-width="20"
+            strokeLinejoin="miter"
+            strokeWidth="20"
           ></path>
         </svg>
       </div>
