@@ -17,7 +17,7 @@ export default async function ActivityPage() {
             </div>
             <div className=" hidden h-1 w-full rounded bg-neutral-600 md:block">
               <div
-                className="h-1 rounded border-b-4 border-dashed border-neutral-700 dark:border-neutral-200"
+                className="h-1 rounded border-b-4 border-neutral-700 dark:border-neutral-200"
                 style={{
                   width: `${item.percent}%`,
                 }}
