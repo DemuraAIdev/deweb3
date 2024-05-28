@@ -26,6 +26,7 @@ export default function Home() {
             alt={'count'}
             width={310}
             height={100}
+            unoptimized
           />
         </div>
         <div className={`prose font-sans dark:prose-dark xl:col-span-2`}>
