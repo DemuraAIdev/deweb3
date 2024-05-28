@@ -8,6 +8,7 @@ import SectionContainer from '@/components/Container'
 import config from '@/data/config'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
+import NextTopLoader from 'nextjs-toploader'
 
 export const metadata: Metadata = {
   metadataBase: new URL(config.siteURL),
@@ -62,6 +63,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${GeistSans.variable} ${GeistMono.variable} scroll-smooth`}
     >
       <body className={`bg-white antialiased dark:bg-dark`}>
+        <NextTopLoader showSpinner={false} zIndex={1600} showAtBottom={true} color="#14b8a6" />
         <Providers>
           <SectionContainer>
             <div className="flex h-screen  flex-col justify-between font-mono  sm:ml-1">
