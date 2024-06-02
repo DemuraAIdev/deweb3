@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: 'AniSearch',
+    description: 'AniSearch is a simple and easy to use Anime Search Engine.',
+    imgSrc: '/images/project/anime.png',
+    href: 'https://anime.vahry.my.id/',
+  },
+  {
     title: 'Technopark Website',
     description: 'Technopark Website for SMKN 1 Kota Bengkulu, Indonesia',
     imgSrc: '/images/project/tepa.png',
