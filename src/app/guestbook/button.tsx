@@ -31,7 +31,7 @@ export function SignIn() {
 
 export function DeleteEnt(id: { id: string }) {
   return (
-    <CustomLink
+    <button
       className={
         'mr-2 inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 transition-all dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100'
       }
@@ -39,6 +39,6 @@ export function DeleteEnt(id: { id: string }) {
       onClick={() => deleteGuestbookEntries(id.id)}
     >
       Delete
-    </CustomLink>
+    </button>
   )
 }
