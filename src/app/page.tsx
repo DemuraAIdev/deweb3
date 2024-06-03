@@ -20,7 +20,8 @@ export default async function Home() {
         <div className="rounded-lg border-2 border-dotted border-gray-600 p-5 ">
           <TypedBios />
           <p className="hover text-lg leading-7 text-black dark:text-gray-400 ">
-            I am a website developer, bot, graphic designer. I learned to make a website from 2019
+            I am a website developer, cloud enginner, graphic designer. I learned to make a website
+            from 2019
           </p>
         </div>
         {/* <svg
