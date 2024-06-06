@@ -3,6 +3,7 @@ import { prisma } from './lib/prisma'
 import { PrismaClient } from '@prisma/client'
 
 import NextAuth, { DefaultSession } from 'next-auth'
+const useSecureCookies = !!process.env.VERCEL_URL
 declare module 'next-auth' {
   /**
    * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
@@ -31,6 +32,18 @@ export const config = {
     async session({ session, user }) {
       session.id = user.id
       return Promise.resolve(session)
+    },
+  },
+  cookies: {
+    sessionToken: {
+      name: `${useSecureCookies ? '__Secure-' : ''}next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        domain: '.vahry.my.id',
+        secure: useSecureCookies,
+      },
     },
   },
 } satisfies NextAuthConfig
