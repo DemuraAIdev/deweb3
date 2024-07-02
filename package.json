@@ -82,5 +82,6 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@8.14.0"
 }
