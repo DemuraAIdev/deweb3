@@ -13,6 +13,10 @@ const config = {
       websiteId: '3ffa1a37-a7e1-44ca-bd8a-4507e10f39fe',
       url: 'https://umami.vahry.my.id/script.js',
     },
+    plausible: {
+      domain: 'vahry.my.id',
+      url: 'https://plausible.vahry.my.id/js/script.js',
+    },
   },
 }
 
