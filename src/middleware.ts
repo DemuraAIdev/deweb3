@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { get } from '@vercel/edge-config'
-import { auth as authMiddleware } from '@/auth'
+// import { get } from '@vercel/edge-config'
+// import { auth as authMiddleware } from '@/auth'
 export async function middleware(req: NextRequest) {
   // Check Edge Config to see if the maintenance page should be shown
-  const isInMaintenanceMode = await get('isInMaintenanceMode')
+  const isInMaintenanceMode = false
 
   // next auth middleware
 
