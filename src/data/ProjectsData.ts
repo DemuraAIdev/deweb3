@@ -17,7 +17,12 @@ const projectsData = [
     imgSrc: '/images/project/arga.png',
     href: 'https://github.com/DemuraAIdev/ARGA',
   },
-
+  {
+    title: 'School Suite',
+    description: 'School Suite is management school system',
+    imgSrc: '/images/project/image.png',
+    href: 'https://schoolsuite.id/',
+  },
   {
     title: 'Dencrypt',
     description: `Dencrypt is a simple, easy to use, and secure file encryption tool.`,

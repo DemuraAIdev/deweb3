@@ -22,12 +22,16 @@ export default function Home() {
       <div className="items-start">
         <div className="mb-2">
           <Image
-            src={'https://countdemura.glitch.me/get/@cyberai2323?theme=rule34'}
+            src={'/images/AbdulVaiz.jpg'}
             alt={'count'}
-            width={310}
-            height={100}
+            width={200}
+            height={200}
             unoptimized
+            className="mx-auto rounded-full"
           />
+        </div>
+        <div className="sticky mt-4 text-center">
+          <h2 className="text-2xl font-semibold">Abdul Vaiz</h2>
         </div>
         <div className={`prose font-sans dark:prose-dark xl:col-span-2`}>
           <MDXRender code={author.body.code} components={components} />

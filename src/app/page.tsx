@@ -1,6 +1,7 @@
 import TypedBios from '@/components/typed'
 import SectionMini from '@/components/Skills'
 import Commits from '@/components/Commits'
+import Link from '@/components/Link'
 
 export default async function Home() {
   return (
@@ -22,6 +23,10 @@ export default async function Home() {
           <p className="hover text-lg leading-7 text-black dark:text-gray-400 ">
             I am a website developer, cloud enginner, graphic designer. I learned to make a website
             from 2019
+            {/* add link /about to see more about */}
+            <Link href="/about">
+              <p className="text-blue-500 hover:text-blue-700">Click here to read more about me</p>
+            </Link>
           </p>
         </div>
         {/* <svg
