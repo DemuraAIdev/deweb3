@@ -31,7 +31,7 @@ export default function Home() {
           />
         </div>
         <div className="sticky mt-4 text-center">
-          <h2 className="text-2xl font-semibold">Abdul Vaiz</h2>
+          <h2 className="text-2xl font-semibold">Abdul Vaiz Vahry Iskandar</h2>
         </div>
         <div className={`prose font-sans dark:prose-dark xl:col-span-2`}>
           <MDXRender code={author.body.code} components={components} />
