@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: 'ASO',
+    description: 'ASO is sosial media made using Go and VueJS.',
+    imgSrc: '/images/project/aso.png',
+    href: 'https://aso.vahry.my.id/',
+  },
+  {
     title: 'AniSearch',
     description: 'AniSearch is a simple and easy to use Anime Search Engine.',
     imgSrc: '/images/project/anime.png',
